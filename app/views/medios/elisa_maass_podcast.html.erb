@@ -1,0 +1,23 @@
+<link href="50000000.css" rel="stylesheet" type="text/css" title="normal"/>
+
+<div class="contenedor clearfix">
+  <div class="cajaDelTituloDeLaPagina">
+  	<span class="nombrePagina">Voces del CEIICH</span> &nbsp;&nbsp;&nbsp;
+  </div>
+
+  <div class=podcast-individual>
+    <table>
+      <tr>
+          <td class= "podcast-ind">
+            <%= image_tag("podcast/voces/elisa_maass.jpg",class: "pod-img-ind")%>
+          </td>
+          <td class= "podcast-ind">
+            <%= audio_tag("elisa_maass.mp3",controls: true, class: "audio" )%>
+          </td>
+      </tr>
+    </table>
+    <%=link_to fa_icon('forward',class: 'fas fa-undo-alt fa-3x icon-back'), 'javascript:history.back()'%>
+  </div>
+
+
+</div>

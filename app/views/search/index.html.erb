@@ -1,0 +1,101 @@
+<%= javascript_include_tag "search" %>
+
+<div class="contenedor">
+
+
+
+  <%= form_tag(search_index_path,  method: :get) do %>
+  <%= label_tag(:search, "Buscar:") %>
+  <%= text_field_tag :search, params[:search]%>
+    <!--Filtros-->
+  <%= label_tag("Categoria:")%>
+  <%= select_tag :categoria, raw("<option></option><option>Libro</option><option>Revista</option><option>Programa</option><option>Actividad</option><<option>Investigador</option><option>Tecnico</option>"), id: "categoria"%>
+
+
+    <% label_tag("Filtrar:")%>
+    <%= select_tag :filtro, raw("<option></option><option>Autor</option><option>Titulo</option><option>coleccion</option>"), id: "filtro-libro"%>
+    <%= select_tag :filtro, raw("<option></option><option>Coleccion</option><option>Descripción</option>"), id: "filtro-revista"%>
+    <%= select_tag :filtro, raw("<option></option><option>Titulo</option><option>Titulo</option><option>coleccion</option>"), id: "filtro-actividad"%>
+    <%= submit_tag("FILTRAR") %>
+  <% end %>
+  <div class="resultado"></div>
+
+  <%if !@search.nil? and !@search.empty?%>
+    <%if @categoria == "Libro"%>
+    <%= render 'resultados_libros', libros: @libroq%>
+    <%end%>
+    <%if @categoria == "Revista"%>
+    <%= render 'resultados_revistas', revistas: @revistaq%>
+    <%end%>
+    <%if @categoria == "Actividad"%>
+    <%= render 'resultados_actividades', eventos: @eventq%>
+    <%end%>
+    <%if @categoria == "Investigador"%>
+    <%= render 'resultados_investigador', investigador: @investigadorq%>
+    <%end%>
+
+    <%if @categoria.nil? or @categoria.blank?%>
+      <span class="nombrePagina"> Todos los resultados</span><br>
+      <%= render 'resultados_libros', libros: @libroq%>
+      <%= render 'resultados_revistas', revistas: @revistaq%>
+      <%= render 'resultados_actividades', eventos: @eventq%>
+      <%= render 'resultados_investigador', investigador: @investigadorq%>
+    <%end%>
+  <%else%>
+  <%if @categoria == "Libro"%>
+  <%= render 'resultados_libros', libros: @libroq%>
+  <%end%>
+  <%if @categoria == "Revista"%>
+  <%= render 'resultados_revistas', revistas: @revistaq%>
+  <%end%>
+  <%if @categoria == "Actividad"%>
+  <%= render 'resultados_actividades', eventos: @eventq%>
+  <%end%>
+  <%if @categoria == "Investigador"%>
+  <%= render 'resultados_investigador', investigador: @investigadorq%>
+  <%end%>
+
+  <%end%>
+</div>
+
+<script type="text/javascript">
+
+$("#filtro-libro").hide();
+$("#filtro-revista").hide();
+$("#filtro-actividad").hide();
+
+$("#filtro-libro").prop( "disabled", true );
+$("#filtro-revista").prop( "disabled", true );
+$("#filtro-actividad").prop( "disabled", true );
+
+  const selectElement = document.querySelector('#categoria');
+
+  selectElement.addEventListener('change', (event) => {
+
+      if (event.target.value == "Libro") {
+        $("#filtro-libro").show();
+        $("#filtro-libro").prop( "disabled", false );
+        $("#filtro-revista").hide();
+        $("#filtro-actividad").hide();
+      }
+      if (event.target.value == "Revista"){
+        $("#filtro-revista").show();
+        $("#filtro-revista").prop( "disabled", false );
+        $("#filtro-libro").hide();
+        $("#filtro-actividad").hide();
+      }
+      if (event.target.value == "Actividad"){
+        $("#filtro-actividad").show();
+        $("#filtro-actividad").prop( "disabled", false );
+        $("#filtro-libro").hide();
+        $("#filtro-revista").hide();
+      }
+      if (event.target.value != "Libro" && event.target.value != "Revista" && event.target.value != "Actividad" ) {
+        $("#filtro-libro").hide();
+        $("#filtro-revista").hide();
+        $("#filtro-actividad").hide();
+      }
+  });
+
+
+</script>

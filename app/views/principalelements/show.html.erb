@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+
+  <%=@principalelement.img%>
+
+<p>
+  <strong>Urlimg:</strong>
+  <%= @principalelement.urlImg %>
+</p>
+
+<p>
+  <strong>Urlvideo:</strong>
+  <%= @principalelement.urlVideo %>
+</p>
+
+<%= link_to 'Edit', edit_principalelement_path(@principalelement) %> |
+<%= link_to 'Back', principalelements_path %>

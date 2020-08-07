@@ -1,0 +1,43 @@
+
+<%if current_admin.try(:is_admin?) or current_admin%>
+
+    <%= link_to "Salir", destroy_admin_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "link" %>
+
+
+    <div class="cajaDelTituloDeLaPagina">
+      <span class="nombrePagina">Panel para administradores</span>
+    </div>
+
+    <div class="panel-administracion">
+      <div>
+          <span class="subtitulo"> Carrusel </span><br>
+        <li><%= link_to "Editar Carrusel", carrusels_path, class: "link"%></li>
+        <li><%= link_to "Nuevo Elemento al Carrusel", new_carrusel_path, class: "link" %></li>
+      </div>
+      <div>
+          <span class="subtitulo"> Videos Medios </span><br>
+          <li><%= link_to " Nuevo Video", new_medio_path, class: "link" %></li>
+          <li><%= link_to "Videos Próximos", "/medios/transmisionesVivo", class: "link" %></li>
+      </div>
+      <div>
+          <span class="subtitulo"> Eventos y/o Actividades </span><br>
+          <li><%= link_to " Nuevo Evento", new_event_path, class: "link" %></li>
+          <li><%= link_to " Ver Eventos", events_path, class: "link" %></li>
+
+      </div>
+      <div>
+          <span class="subtitulo"> Nuevo Libro </span><br>
+          <li><%= link_to " Nuevo Evento", new_libro_path, class: "link" %></li>
+      </div>
+      <div>
+        <span class="subtitulo"> Nueva Revista </span><br>
+        <li><%= link_to " Editar Eventos", new_revista_path, class: "link" %></li>
+
+      </div>
+      <div>
+        <span class="subtitulo"> Nuevo Video </span><br>
+        <li><%= link_to " Ver Videos", new_video_path, class: "link" %></li>
+      </div>
+
+    </div>
+<% end %>

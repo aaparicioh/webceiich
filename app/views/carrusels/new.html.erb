@@ -1,0 +1,12 @@
+<div class="contenedor">
+  <%if current_admin.try(:is_admin?) or current_admin%>
+
+  <h1>Nuevo Elemento al Carrusel</h1>
+
+  <%= render 'form', modelo: @carrusel %>
+
+  <%= link_to 'Ver todos los elementos', carrusels_path, class: "btn btnPrimario"%>
+  <%end%>
+
+
+</div>

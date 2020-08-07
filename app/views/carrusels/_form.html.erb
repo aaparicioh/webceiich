@@ -1,0 +1,29 @@
+  <div class="row">
+    <div class="mx-auto col-md-6 col-10">
+      <%= form_with(model: modelo, local: true,builder: BootstrapFormBuilder) do |form| %>
+      <%= render "partials/error_form", :modelo => modelo%>
+        <div class="row">
+          <%= form.label :imagen %>
+          <%= form.file_field :img, id: :image_img %>
+        </div>
+
+        <div class="row">
+          <%= form.label :url %>
+          <%= form.text_field :url %>
+        </div>
+          <div class="row">
+            <%= form.label :doc %>
+            <%= form.file_field :doc%>
+          </div>
+
+
+          <div class="row">
+            <%= form.label :evento %>
+            <%= form.select :event_id,options_from_collection_for_select(Event.all, :id, :titulo) %>
+          </div>
+        <div class="row">
+          <%= form.submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>

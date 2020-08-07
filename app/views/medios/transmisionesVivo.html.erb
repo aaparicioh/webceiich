@@ -1,0 +1,78 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="titulo">
+      Transmisiones en Vivo
+    </span>
+  </div><br>
+  <%=fa_icon('backward',class: 'fas fa-backward icon')%><%= link_to "Pasadas", medios_transmisionesPasadas_path,class: "btn btnNoActivo"%>
+  <%= link_to "Próximas",medios_transmisionesVivo_path,class: "btn btnActivo"%><%=fa_icon('forward',class: 'fas fa-forward icon')%>
+
+  <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+
+    <%= link_to "Nuevo", new_medio_path, class: "btn btnNoActivo"%>
+
+  <%end%>
+
+  <div class="row">
+    <% if videos.fecha.strftime("%Y-%m-%d") >= Time.now.strftime("%Y-%m-%d")%>
+    <div class="col-md-6">
+      <%videos.fecha.strftime("%Y-%m-%d")%>
+        <iframe width="600" height="380" src="https://www.youtube.com/embed/<%=videos.url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> <br>
+        <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+          <%= link_to "Eliminar", videos, method: :delete, data: {confirm: "Esta seguro de eliminarlo?"}, class: "btn btnNoActivo"%>
+          <%= link_to "Editar", edit_medio_path(videos), class: "btn btnNoActivo"%>
+        <%end%>
+    </div>
+    <%end%>
+  </div>
+
+</div>
+<div class="cajaDelTituloDeLaPagina">
+  	<span class="nombrePagina">Transmisiones en Vivo </span> &nbsp;&nbsp;&nbsp;
+  </div>
+  <div class="nav-transmiciones">
+    <%=fa_icon('backward',class: 'fas fa-backward fa-2x  icon-video')%><%= link_to "Pasadas", medios_transmisionesPasadas_path,class: "transmiciones"%>
+    <%=fa_icon('forward',class: 'fas fa-forward fa-2x icon-video')%><%= link_to "Próximas",medios_transmisionesVivo_path,class: "transmiciones"%>
+  </div>
+  <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+  <div class="caja-admin">
+    <%= link_to "Nuevo", new_medio_path, class: "btn-new"%>
+  </div>
+  <%end%>
+
+
+
+  <div class="tabla-videos">
+    <table>
+      <%cont = 0%>
+        <%@medio_videos.order("created_at DESC").each do |videos|%>
+
+          <% if videos.fecha.strftime("%Y-%m-%d") >= Time.now.strftime("%Y-%m-%d")%>
+            <%if cont == 0%>
+              <tr>
+                <td class="td-top">
+                <%videos.fecha.strftime("%Y-%m-%d")%>
+                <iframe width="600" height="380" src="<%=videos.url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> <br>
+                <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+                  <%= link_to "Eliminar", videos, method: :delete, data: {confirm: "Esta seguro de eliminarlo?"}, class: "btn-eliminar"%>
+                  <%= link_to "Editar", edit_medio_path(videos), class: "btn-editar"%>
+                <%end%>
+                </td>
+              <%cont = cont+1%>
+            <%else%>
+                <td class="td-top">
+                <%videos.nombreVideo%>
+                <iframe width="600" height="380" src="<%=videos.url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+                  <%= link_to "Eliminar", videos, method: :delete, data: {confirm: "Esta seguro de eliminarlo?"}, class: "btn-eliminar"%>
+                  <%= link_to "Editar", edit_medio_path(videos), class: "btn-editar"%>
+                <%end%>
+                </td>
+              </tr>
+              <%cont = 0%>
+            <%end%>
+          <%end%>
+        <%end%>
+    </table>
+  </div>

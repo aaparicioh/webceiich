@@ -1,0 +1,17 @@
+
+
+    <div class="cajaDelTituloDeLaPagina">
+      <span class="nombrePagina">Crítica jurídica</span>
+    </div>
+
+        <p align="center">Para ver pulse sobre la portada</p>
+        <div class="cajarevistas">
+        <%@revistas.order("created_at DESC").each do |revista|%>
+          <%if revista.coleccion == "crítica jurídica"%>
+            <div class="">
+              <p align="center"><%=link_to (image_tag "#{revista.img}"), asset_path(revista.pdf, skip_pipeline: true), target: "_blank"%></p>
+              <p align="center">  <%=revista.descripcion%></p>
+            </div>
+          <%end%>
+        <%end%>
+        </div>

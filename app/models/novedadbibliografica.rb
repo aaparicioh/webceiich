@@ -1,0 +1,2 @@
+class Novedadbibliografica < ApplicationRecord
+end

@@ -1,0 +1,10 @@
+<%=anio%>
+<%=tipo%>
+  <%@archivos.order(clave: :desc).each do |archivo|%>
+  <div class="div-archivos">
+    <%=fa_icon('paperclip',class: 'fas fa-paperclip fa-2x ')%><%= link_to archivo.titulo,"http://computo.ceiich.unam.mx/webceiich/deptoDifusion/32PreMed/09-08-B1.pdf",class: "linkTitulo"%>
+    <p>Realización del evento: <%=l(archivo.fecha, format: '%d %B')%></p>
+    <p>Fuente:</p><%=archivo.fuente.try(:html_safe)%>
+  </div>
+  <%end%>
+<%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>

@@ -1,0 +1,42 @@
+<link href="20000000.css" rel="stylesheet" type="text/css" title="normal"/>
+<div class="contenedor">
+
+  <%= render "publicaciones"%>
+  <div class="cajadatosDepartamentos">
+    <div class="botones">
+      <%= link_to "Personal","publicaciones",class: "btnDepoActivo"%>
+      <%= link_to "Fondo Editorial","fondo_editorial",class: "btnDepoNoActivo"%>
+      <%= link_to "Venta y Distribución","ventasydistribuciones",class: "btnDepoNoActivo"%>
+    </div>
+  </div>
+
+          <div class="cajaContenidosPersonalAcademico" id="datospublicaciones">
+              <div class="datosDepartamentos">
+                  <p class="personalAcademico" align="justify"></p>
+                  <p align="justify" class="tituloPersonalProyecto">Jefa del Departamento</p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><span class="personalAcademico"> María Consuelo Yerena Capistrán</span><br></p>
+                  <p align="justify">Tel. 5623-0222 ext. 42062</p>
+                  <p align="justify">publicaciones@ceiich.unam.mx</p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><span class="personalAcademico">Julieta Llamas Ju&aacute;rez</span> (asistente ejecutiva)</p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><span class="personalAcademico"> Alicia Vera Cruz</span> (administrativo)</p>
+                  <p align="justify" class="tituloPersonalProyecto">Diseño:</p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  María de los Ángeles Consuelo Alegre Schettino", "/tecnicos/informacion/1", :class => "personalAcademico" %></p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Amanali María Cornejo Vázquez", "/tecnicos/informacion/6", :class => "personalAcademico" %> </p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><span class="personalAcademico"> Laura Mart&iacute;nez Cuevas</span></p>
+                  <p align="justify" class="tituloPersonalProyecto">Edición:</p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Concepción Alida Casale Núñez", "/tecnicos/informacion/3", :class => "personalAcademico" %></p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Clara Elizabeth Castillo Álvarez", "/tecnicos/informacion/4", :class => "personalAcademico" %></p>
+                  <p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><span class="personalAcademico"> Juan Francisco Escalona Alarcón</span> (administrativo)</p>
+                  <p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><%= link_to "  Isauro Uribe Pineda", "/tecnicos/informacion/26", :class => "personalAcademico" %></p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Josefina Jiménez Cortés", "/tecnicos/informacion/12", :class => "personalAcademico" %></p>
+                  <p align="justify" class="tituloPersonalProyecto">Ventas y Distribución de Publicaciones:</p>
+                  <p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><span class="personalAcademico"> Horacio León Pérez</span> (Jefe de Departamento)<br></p>
+                  <p align="justify">Tel. 56230222 ext. 42794</p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><span class="personalAcademico"> Ivonne Paredes Jaime</span> (administrativo)</p>
+                  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><span class="personalAcademico"> Silvia Villanueva Avilés</span> (administrativo)</p>
+                  <p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><span class="personalAcademico"> Salvador Pascual Trejo</span> (administrativo)</p>
+                  <p align="justify">&nbsp;</p>
+              </div>
+          </div>
+
+</div>

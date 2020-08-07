@@ -1,0 +1,28 @@
+<link href="20000000.css" rel="stylesheet" type="text/css" title="normal"/>
+<link href="publicaciones.css" rel="stylesheet" type="text/css" title="normal"/>
+
+<div class="contenedor">
+  <%= render "publicaciones"%>
+  <div class="cajadatosDepartamentos">
+    <div class="botones">
+      <%= link_to "Personal","publicaciones",class: "btnDepoNoActivo"%>
+      <%= link_to "Fondo Editorial","fondo_editorial",class: "btnDepoNoActivo"%>
+      <%= link_to "Venta y Distribución","ventasydistribuciones",class: "btnDepoActivo"%>
+    </div>
+  </div>
+      <div class="publicaciones">
+        <span>Librería</span>
+
+        <p>Torre II de Humanidades 4° piso
+        Circuito Interior, Ciudad Universitaria Coyoacán, México 04510 D. F.</p>
+
+        <p>Teléfonos: 56230222 ext. 42793</p>
+
+
+        <p>Correo electrónico: libreria.ceiich.unam@gmail.com</p>
+
+        <%=link_to "Catálogo: Ver catalogo","/fondo_editorial/libros_tematica",class: "link"%>
+
+      </div>
+
+</div>

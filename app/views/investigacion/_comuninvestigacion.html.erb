@@ -1,0 +1,12 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="tituloCaja"><%= "Programa de Investigación " + @programa.nombre %></span>
+  </div>
+  <div class="contenedor-imgdesc">
+    <div class="cajaImagen">
+      <%= image_tag "programasInvestigacion/"+@programa.foto, class: "imagen" %>
+    </div>
+    <div class="cajaDescripcion">
+      <%= @programa.descripcion %>
+    </div>
+  </div>

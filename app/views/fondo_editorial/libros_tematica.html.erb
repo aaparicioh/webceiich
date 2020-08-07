@@ -1,0 +1,63 @@
+
+  <div class="titulos">
+    <span class="btnActivo">
+      <h2 class: "libros"><%=fa_icon('book',class: 'fas fa-book icon-libro')%> Libros</h2>
+    </span>
+    </div>
+    <div class="opciones">
+      <span class="btnNoActivo">
+          <%= link_to "Colección", "libros_coleccion" %>
+      </span>
+      <span class="btnActivo">
+        <%= link_to "Tématicas", "libros_tematica" %>
+      </span>
+    </div>
+
+    <div class="contenido">
+
+<div style="width:47%; float:left; margin-left:3%">
+<%#@tematica = ["Ámerica Latina, Centroamérica", "Artes, fotografia,cine,música","Bienes y servicios, políticas públicas, pobreza, migración","Ciencia y tecnología","ciencia_tecnologia"]%>
+<%#@tematica[0]%>
+
+<p> <%#fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%#= link_to "Ámerica Latina, Centroamérica",libros_tematica_path(:tematica => @tematica[0]), class:"link-libros"%></p></p>
+<p> <%#fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%#= link_to "Artes, fotografia,cine,música",libros_tematica_path(:tematica => @tematica[1]), class:"link-libros"%></p></p>
+<p> <%#fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%#= link_to "Bienes y servicios, políticas públicas, pobreza, migración",libros_tematica_path(:tematica => @tematica[2]), class:"link-libros"%></p>
+<p> <%#fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%#= link_to "Ciencia y tecnología",libros_tematica_path(:tematica => @tematica[3]), class:"link-libros"%></p>
+
+  <p></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Ámerica Latina, Centroamérica","america_latina", class:"link-libros"%></p></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Artes, fotografia,cine,música","artes_foto_cine_musica", class:"link-libros"%></p></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Bienes y servicios, políticas públicas, pobreza, migración","bienes_servicios", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Ciencia y tecnología","ciencia_tecnologia", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Ciencia, tecnología y género","ciencia_tecnologia_genero", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Ciencias sociales","ciencias_sociales", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Conceptos","conceptos", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Democracia, elecciones, partidos, política","democracia", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Desarrollo local, regional","desarrollo_local", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Desarrollo, medio ambiente y recursos naturales","medio_ambiente", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Economía, crisi económia, ajustes y desarrollo, industria, empresas, mercados","economia", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Educaciòn Superior, universidades, enseñanza","educacion_superior", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "El estado mexicano, gobernabilidad, soberanía","estado_mexicano", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "El mundo, globalización","mundo", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Filosofía, epistemología, humanidades","filosofia", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Futuros, prospectiva","futuros", class:"link-libros"%></p>
+
+</div>
+<div style="width:47%; float:left; margin-left:3%">
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Género, teoría feminista","genero", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Grandes teorías e ideologías, los clàsicos","teorias", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Historia de la ciencia","historia_ciencia", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Interdisciplina, relaciones entre ciencia y humanidades","interdiciplina", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Jornadas Anuales de investigación","jornadas_anuales", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "La guerra y la paz, imperialismo, terrorismo, militarización","guerra_paz", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Literatura, lingüística, cultura","literatura", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Los pueblos indios","pueblos_indios", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Matemáticas, modelos","matematicas", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Medios de comunicación","medios_comunicacion", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Metodología","metodologia", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Organización y movimientos sociales, ciudadanía, sociedad civil","movimientos_sociales", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Religión","religion", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Sistemas complejos","sistemas_complejos", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Sociología jurídica, derechos humanos","sociologia_juridica", class:"link-libros"%></p>
+  <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Teoría feminista","teoria_feminista", class:"link-libros"%></p>
+</div>

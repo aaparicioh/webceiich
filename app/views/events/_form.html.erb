@@ -1,0 +1,117 @@
+
+<%= form_with(model: event, local: true) do |form| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_inicial %>
+    <%= form.date_select :fecha_inicial, class: "fecha_inicial" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_final %>
+    <%= form.date_select :fecha_final, class: "fecha_final" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_inicial %>
+    <%= form.time_select :hora_inicial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_final %>
+    <%= form.time_select :hora_final %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lugar %>
+    <%= form.text_field :lugar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coordinacion %>
+    <%= form.text_field :coordinacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :participantes %>
+    <%= form.text_area :participantes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :moderador %>
+    <%= form.text_field :moderador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transmision_vivo %>
+    <%= form.text_field :transmision_vivo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :informes %>
+    <%= form.text_field :informes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :programa %>
+    <%= form.text_field :programa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colaboracion %>
+    <%= form.text_field :colaboracion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :temas %>
+    <%= form.text_field :temas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :informacion %>
+    <%= form.cktext_area :informacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :programa_completo %>
+    <%= form.file_field :programa_completo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtitulo %>
+    <%= form.text_field :subtitulo %>
+  </div>
+  <div class="field">
+    <%= form.label :actividades_Internas%>
+    <%= form.cktext_area :actividades_internas%>
+  </div>
+
+  <div class="field">
+  <%= form.label :imagen %>
+  <%= form.file_field :img %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

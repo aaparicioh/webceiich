@@ -1,0 +1,32 @@
+  <p id="notice"><%= notice %></p>
+  <h1>Eventos</h1>
+  <p><%= link_to 'Nuevo Evento', new_event_path, class: "link" %></p>
+  <%cont = 0%>
+  <%contmodal=1%>
+  <div class="div-eventos">
+    <%@events.order(clave: :desc).each do |event|%>
+      <%if event.id != 1%>
+        <%if cont == 0%>
+          <div class="centrar">
+            <%@ActividadModal="ActividadModal"+contmodal.to_s%>
+            <%=image_tag "#{event.img}", class: "foto-mini", data: { target: "##{@ActividadModal}", toggle: "modal"}%>
+            <%=render "/actividades_academicas/modal", event: event%>
+            <%contmodal=contmodal+1%>
+            <%=link_to 'Editar', edit_event_path(event), class: "link" %>
+            <%=link_to 'Destruir', event, method: :delete, data: { confirm: 'Estas seguro?' }, class: "link" %>
+          </div>
+          <%cont = cont+1%>
+        <%else%>
+          <div class="centrar">
+            <%@ActividadModal="ActividadModal"+contmodal.to_s%>
+            <%=image_tag "#{event.img}", class: "foto-mini", data: { target: "##{@ActividadModal}", toggle: "modal"}%>
+            <%=render "/actividades_academicas/modal", event: event%>
+            <%=link_to 'Editar', edit_event_path(event), class: "link" %>
+            <%=link_to 'Destruir', event, method: :delete, data: { confirm: 'Estas seguro?' }, class: "link" %>
+            <%contmodal=contmodal+1%>
+          </div>
+          <%cont = 0%>
+        <%end%>
+     <%end%>
+    <%end%>
+  </div>

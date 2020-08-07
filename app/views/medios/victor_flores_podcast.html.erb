@@ -1,0 +1,18 @@
+
+  <div class="cajaDelTituloDeLaPagina">
+  	<span class="nombrePagina">Voces del CEIICH</span> &nbsp;&nbsp;&nbsp;
+  </div>
+
+  <div class=podcast-individual>
+    <table>
+      <tr>
+          <td class= "podcast-ind">
+            <%= image_tag("podcast/voces/victor_flores.jpg",class: "pod-img-ind")%>
+          </td>
+          <td class= "podcast-ind">
+            <%= audio_tag("victor_flores.mp3",controls: true, class: "audio" )%>
+          </td>
+      </tr>
+    </table>
+    <%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>
+  </div>

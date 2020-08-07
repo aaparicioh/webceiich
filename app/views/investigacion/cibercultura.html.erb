@@ -1,0 +1,38 @@
+<%= render 'comuninvestigacion' %>
+
+<div class="contenedor">
+  <br>
+  <div class="divTitulo">
+      <span class="subtitulo">Personal y proyectos de investigación</span>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+
+      <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Amozurrutia de María y Campos José Antonio", "/investigadors/informacion/4", class: "personalAcademico" %></a><span class="cargo"> / coordinador</span> <br />
+        <span class="proyectosDeInvestigacion">Desarrollo de modelos matemáticos para la simulación de fenómenos sociales. </span>
+      </p>
+      <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  González Sánchez Jorge Alejandro", "/investigadors/informacion/21", class: "personalAcademico" %><br>
+        <span class="proyectosDeInvestigacion">Investigación y desarrollo de cibercultur@ en México y Brasil.</span>
+      </p>
+      <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Maass Moreno Elisa Margarita", "/investigadors/informacion/35", class: "personalAcademico" %><br>
+        <span class="proyectosDeInvestigacion">Cibercultur@ y gestión cultural para el desarrollo.</span>
+      </p>
+      <p><br />
+      </p>
+    </div>
+    <div class="col-md-4">
+      <p class="tituloTecAcademicos">Ayudantes de Investigación:</p><br>
+        <span class="personalAcademicoSinLiga">Emilia De Gyves P&eacute;rez </span> <span class="proyectosDeInvestigacion">(Becaria SNI)</span><br />
+        <span class="personalAcademicoSinLiga">Luis Andrés Estrada Aguilar</span><span class="proyectosDeInvestigacion">(Becario SNI)</span>
+        <br />
+      </p>
+    </div>
+    <div class="col-md-4">
+      <%=render 'publicaciones' , publicacion: @publicacion , programa: @programa.id %>
+    </div>
+  </div>
+<div class="row">
+  <%=render '/publicaciones/form' , publicacion: @publicacion , programa: @programa.nombre %>
+</div>
+</div>

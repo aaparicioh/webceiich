@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mes:</strong>
+  <%= @novedadbibliografica.mes %>
+</p>
+
+<p>
+  <strong>Anio:</strong>
+  <%= @novedadbibliografica.anio %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @novedadbibliografica.nombre_pdf %>
+</p>
+
+<%= link_to 'Edit', edit_novedadbibliografica_path(@novedadbibliografica) %> |
+<%= link_to 'Back', novedadesbibliograficas_path %>

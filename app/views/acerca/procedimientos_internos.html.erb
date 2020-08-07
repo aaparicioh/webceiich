@@ -1,0 +1,97 @@
+<div class="cajaDelTituloDeLaPagina"><span class="nombrePagina">Procedimientos Internos</span></div>
+<br/>
+<br/>
+<br/>
+
+<h5>Comisiones, licencias y permisos</h5>
+
+
+<%@documentos.each do |d|%>
+
+  <%if d.subtipo == "Comisiones, licencias y permisos"%>
+
+    <div class="cajaprocInternos">
+      <div>
+          <%= fa_icon('download',class: 'fas fa-download')%>
+          <%=  link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"   %>
+      </div>
+      <div>
+          <%= fa_icon('download',class: 'fas fa-download')%>
+        <%=link_to "Formato", asset_path(d.doc, skip_pipeline: true), target: "_blank", class: "link" %>
+      </div>
+    </div>
+  <%end%>
+<%end%>
+<br>
+<h5>Sabático</h5>
+
+<%@documentos.each do |d|%>
+  <%if d.subtipo == "Sabático"%>
+  <div class="cajaprocInternos">
+    <div>
+
+        <%= d.nombre%>
+    </div>
+    <div>
+        <%= fa_icon('download',class: 'fas fa-download')%>
+      <%=link_to "Formato", asset_path(d.doc, skip_pipeline: true), target: "_blank", class: "link" %>
+    </div>
+  </div>
+  <%end%>
+<%end%>
+<br>
+<h5>Promoción, definitividad y cambio de adscripción</h5>
+
+<%@documentos.each do |d|%>
+  <%if d.subtipo == "Promoción, definitividad y cambio de adscripción"%>
+  <div class="cajaprocInternos">
+    <div>
+
+      <%= d.nombre%>
+    </div>
+    <div>
+        <%= fa_icon('download',class: 'fas fa-download')%>
+      <%=link_to "Formato", asset_path(d.doc, skip_pipeline: true), target: "_blank", class: "link" %>
+    </div>
+  </div>
+  <%end%>
+<%end%>
+
+<br>
+<h5>Movilidad entrante</h5>
+
+<%@documentos.each do |d|%>
+  <%if d.subtipo == "Movilidad entrante"%>
+  <div class="cajaprocInternos">
+    <div>
+
+      <%= d.nombre%>
+    </div>
+    <div>
+        <%= fa_icon('download',class: 'fas fa-download')%>
+      <%=link_to "Formato", asset_path(d.doc, skip_pipeline: true), target: "_blank", class: "link" %>
+    </div>
+  </div>
+  <%end%>
+<%end%>
+
+<br>
+<h5>Programa de becas</h5>
+<%@documentos.each do |d|%>
+  <%if d.subtipo == "Programa de becas"%>
+  <div class="cajaprocInternos">
+    <div>
+
+      <%= d.nombre%>
+    </div>
+    <div>
+        <%= fa_icon('download',class: 'fas fa-download')%>
+      <%=link_to "Formato", asset_path(d.doc, skip_pipeline: true), target: "_blank", class: "link" %>
+    </div>
+  </div>
+  <%end%>
+
+
+<%end%>
+
+<%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>

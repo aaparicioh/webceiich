@@ -1,0 +1,144 @@
+<head>
+  <%= javascript_include_tag "calendario", "data-turbolinks-track" => true  %>
+
+</head>
+
+<div class="contenedor">
+  <div class="cajaDelTituloDeLaPagina">
+    <p><span class="nombrePagina">Diplomados, Seminarios y Cursos</span></p>
+
+    <div class="actividades">
+
+    </div>
+    <%contmodal=1%>
+    <% @events.each do |event| %>
+
+
+      <%if Time.now.strftime("%m") == event.fecha_inicial.try(:strftime,("%m")) %>
+        <%if event.tipo == "Diplomado" || event.tipo == "Seminario" || event.tipo=="Curso"%>
+        <%@ActividadModal="ActividadModal"+contmodal.to_s%>
+        <%= image_tag "#{event.img}", class: "foto-mini", data: { target: "##{@ActividadModal}", toggle: "modal"}%>
+        <%=render "modal", event: event%>
+
+        <%end%>
+      <%end%>
+      <%contmodal=contmodal+1%>
+    <%end%>
+  </div>
+  <br>
+  <div class="cajaDelTituloDeLaPagina">
+    <p><span class="nombrePagina">Proximas Actividades</span></p>
+
+    <%contmodal=1%>
+    <% @events.each do |event| %>
+
+      <%if event.tipo != "Diplomado" && event.tipo != "Seminario" && event.tipo!="Curso"%>
+        <%if Time.now.strftime("%m") == event.fecha_inicial.try(:strftime,("%m")) %>
+          <%@ActividadModal="ActividadModal"+contmodal.to_s%>
+          <%= image_tag "#{event.img}", class: "foto-mini", data: { target: "##{@ActividadModal}", toggle: "modal"}%>
+          <%=render "modal", event: event%>
+
+        <%end%>
+
+      <%end%>
+      <%contmodal=contmodal+1%>
+    <%end%>
+  </div>
+
+
+<div id="calendar"> </div>
+
+</div>
+
+<!-- Modal -->
+<div id="calendarModal" class="modal modal-events" >
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content modal-cont-events">
+          <div class="modal-header">
+
+            <h4 id="modalTitle" <%= @tit%>  class="modal-title"></h4>
+
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+          </div>
+          <div id="modalBody" class="modal-body modal-body-event">
+            <div class="event-img">
+                <p id="imagen"></p>
+              </div>
+            <div class="event-desc">
+              <p>
+                <%= fa_icon('paper-plane',class: 'fas fa-paper-plane  icono')%>
+                </i><strong>Subtitulo:</strong>
+              </p>
+              <p>
+                <span id="subtitulo"></span>
+              </p>
+              <p>
+                <%= fa_icon('calendar',class: 'fas fa-calendar fa-2x icono')%>
+                </i><strong>Fecha Inicio:</strong>
+              </p>
+              <p>
+                <span id="fecha_inicial"></span>
+              </p>
+              <p>
+                <%= fa_icon('calendar',class: 'far fa-calendar fa-2x icono')%>
+                <strong>Fecha Fin:</strong>
+              </p>
+              <p>
+                <span id="fecha_final"></span>
+              </p>
+              <p>
+                <%= fa_icon('map-marker',class: 'fas fa-map-marker fa-2x icono')%>
+                <strong>Lugar:</strong>
+              </p>
+              <p>
+                <span id="lugar"></span>
+              </p>
+              <p>
+                <%= fa_icon('user',class: 'fas fa-user fa-2x icono')%>
+                <strong>Coordinacion:</strong>
+                <span id="coordinacion"></span>
+              </p>
+              <p>
+                <%= fa_icon('users',class: 'fas fa-users fa-2x icono')%>
+                <strong>Participantes:</strong>
+              </p>
+              <p>
+                <span id="participantes"></span>
+              </p>
+              <p>
+                <strong>Temas:</strong>
+                <span id="temas"></span>
+              </p>
+              <p>
+                <strong>Transmicion en vivo:</strong>
+                <span id="transmision_vivo"></sptarget=\"_blank\"an>
+              </p>
+              <p>
+                <strong>Programa Completo:</strong>
+                <span id="programa_completo"></span>
+              </p>
+              <p>
+                <strong>Informes:</strong>
+                <span id="informes"></span>
+              </p>
+              <p>
+                <strong>Programa:</strong>
+                <span id="programa"></span>
+              </p>
+              <p>
+                <strong>Informacion:</strong>
+                <span id="informacion"></span>
+              </p>
+              <p>
+                <strong>Actividades Internas:</strong>
+                <span id="actividades_internas"></span>
+              </p>
+            </div>
+
+            <span id = "ae"></span>
+
+          </div>
+
+      </div>
+  </div>
+</div>

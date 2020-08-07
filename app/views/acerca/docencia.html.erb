@@ -1,0 +1,10 @@
+
+<h5>Docencia</h5>
+<br>
+<%@documentos.each do |d|%>
+  <%if d.tipo == "Docencia"%>
+    <h6><%=link_to d.nombre, asset_path(d.doc, skip_pipeline: true), target: "_blank", class: "link" %></h6>
+  <%end%>
+<%end%>
+
+  <%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>

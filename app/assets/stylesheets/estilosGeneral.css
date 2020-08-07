@@ -1,0 +1,722 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+
+
+}
+@font-face {
+    font-family: "AlegreyaSans-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/alegreya/AlegreyaSans-Regular.otf") format("woff"),
+			url("/fonts/alegreya/AlegreyaSans-Regular.otf") format("truetype");
+}
+
+body {
+  margin: 0 auto;
+	background-color:#f2f8fe;
+	font-family: "Myriad Pro", Myriad, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size: 14px;
+	text-align: left;
+  vertical-align: central;
+    background: url('fondoDeAgua.png');
+}
+
+/* 	margin-top: 0px;
+	margin-left: 0px;
+Contenedor general de la página
+*/
+p{
+  font-family: 'Hind', sans-serif;
+  /*font-size: 1.1em;*/
+}
+
+li{
+  font-size: 1.1em!important;
+}
+.contenedor {
+	margin: 0 auto;
+	width: 1280px;
+  background: url('fondoDeAgua.png');
+  float: none;
+}
+
+
+/*
+Encabezado
+*/
+.header{
+	/*margin-bottom: 5px;
+	width: 1284px;
+	float: none;*/
+  display: flex;
+}
+
+
+
+
+
+
+
+.cajaAnimacionInicial{
+
+	width: 1280px;
+	height:300px;
+	float: left;
+
+}
+
+.contenedor-imagenInicio{
+
+  	width: 1280px;
+  	height: 400px;
+    margin-bottom: 20px;
+}
+
+/**/
+
+
+
+.cajaAnimacionInicial{
+
+	width: 1280px;
+	height:300px;
+	float: left;
+
+}
+
+
+/* INICIA MENÚ DE NAVEGACIÓN */
+
+#nav {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+
+#nav icono {
+  padding: 0 20px;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#nav .ul-principal{
+  width: 100%;
+  font-size: 16px;
+  padding-left: 150px;
+}
+#nav ul {
+  padding: 0 15px;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Styles for each element section */
+#nav ul li {
+  float: left;
+  border-top: 4px solid transparent;
+ color: #000000;
+
+}
+
+#nav ul li:hover,
+#nav ul li:focus,
+#nav ul li:active,
+#nav ul li.active {
+  border-top: 4px solid #782c80;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: pointer;
+}
+
+#nav ul li:hover span,
+#nav ul li:active span,
+#nav ul li.active span {
+  /* Debe ser el mismo que `background' de `body' */
+  width: auto;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+
+}
+
+#nav ul li span {
+  display: block;
+  padding: 10px 10px;
+}
+
+.item-nav{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#nav ul li:hover .interdisciplina,
+#nav ul li:focus .interdisciplina,
+#nav ul li:active .interdisciplina {
+  background-color: #fff;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+#nav ul ul {
+  display: none;
+  background-color: #782c80;
+  border-radius: 0 15px 15px 15px;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  text-align: left;
+  padding-bottom: 5px;
+  z-index: 1;
+}
+
+#nav ul li:hover > ul,
+#nav ul li:focus > ul,
+#nav ul li:active > ul,
+#nav ul li.active > ul {
+  display: block;
+  cursor: pointer;
+
+}
+
+#nav ul ul li {
+  float: none;
+  position: relative;
+  border: none;
+  min-width: 12em;
+  height: 2em;
+  line-height: 2em;
+  padding: 0 15px;
+
+}
+
+
+#nav ul ul li:hover,
+#nav ul ul li:focus,
+#nav ul ul li:active,
+#nav ul ul li.active {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+#nav ul ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#nav ul ul li a:hover,
+#nav ul ul li a:focus,
+#nav ul ul li a:active,
+#nav ul ul li a.active {
+  background-color: rgba(56, 147, 142, 0.7)!important;
+  text-decoration: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+
+/* revista */
+.interdisciplina {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  padding: 10px 10px;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+/*BARRA DE NAVEGACIÓN ITEMS, LOGOS, BARRA DE BUSQUEDA */
+.action-group {
+  float: right;
+
+}
+
+.action-group form {
+  display: inline-block;
+  margin: 0;
+  width: 90%;
+  position: relative;
+}
+
+.search-input {
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-color: #ddd;
+  font-family: FontAwesome;
+  color: #4d4d4d;
+  width: 90%;
+  padding: 3px;
+  display: inline-block;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-submit {
+  border: none;
+  background-color: #ddd;
+  font-family: FontAwesome;
+  color: #4d4d4d;
+  width: 25px;
+  display: inline-block;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: -30px;
+}
+
+.search-submit:focus {
+  outline: none;
+}
+
+.icons {
+  display: inline-block;
+  padding-top: 5px;
+
+}
+
+
+.icons a {
+  text-decoration: none;
+  margin-right: 0.5em;
+}
+
+
+.icono:hover{
+  background-color: white;
+}
+
+.i-facebook{
+  color: #3b5998;
+}
+
+.i-youtube{
+  color: #c4302b;
+}
+
+.i-twitter{
+  color: #00ACEE;
+}
+
+.i-instagram{
+  color: #DD2A7B;
+}
+.i-instagram:hover{
+  color: #8134AF;
+}
+
+/*index*/
+
+/*Imagen inicio*/
+
+.img-inicial{
+  position: relative;
+  text-align: center;
+
+}
+
+#marcos{
+  position: absolute;
+    z-index: 1;
+    top: 1px;
+}
+
+#foto1{
+  position: absolute;
+  left: 6%;
+  top: 55%;
+  z-index: 2;
+}
+
+#foto2{
+  position: absolute;
+  left: 21%;
+  top: 5%;
+  z-index: 2;
+}
+
+#foto3{
+  position: absolute;
+  left: 39.5%;
+  top: 50%;
+  z-index: 2;
+}
+
+#foto4{
+  position: absolute;
+  left: 56.9%;
+  top: 8%;
+  z-index: 2;
+}
+
+#foto5{
+  position: absolute;
+  left: 71%;
+  top: 58%;
+  z-index: 2;
+}
+
+.cambioimg img{
+  filter: grayscale(0%);
+
+  -webkit-filter: grayscale(0%);
+
+  transition:filter 0.4s, transform 2S;
+
+  -webkit-transition:-webkit-filter 1s;
+
+}
+
+.cambioimg img:hover{
+  width: 120%;
+  height: 120%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition:filter 0.4s;
+  -webkit-transition:-webkit-filter 1s;
+}
+
+
+
+
+/***************************************/
+
+
+.carrusel{
+  margin-top: 20px;
+}
+
+/*
+Termina Navegacion
+*/
+
+/*
+Inicia facebook
+*/
+
+#cajaFacebook {
+  margin-top: 50px;
+  width: 525px;
+	float:right;
+}
+
+/*
+Termina facebook
+*/
+
+
+
+/*
+Inicia Contenido
+*/
+
+.contenido {
+   width: 1180px;
+	float: left;
+	margin-left: 35px;
+	margin-top: 10px;
+
+}
+
+
+/*
+Termina Contenido
+*/
+
+/*Elementos principales*/
+
+.div-principal{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+
+/*
+Inician Pie con Banners y Pie con Derechos
+*/
+
+/*INICIO*/
+footer div{
+    background: url('fondoDeAgua.png');
+}
+
+.pie-banners {
+		margin: 0 auto;
+	background-color: #FFFFFF;
+	float: left;
+}
+
+
+.pie-derechos {
+	width: 1270px;
+	font-family: "Lucida Grande", "lucida sans", "Lucida Sans Unicode", "Lucida Console";
+	font-size: 10px;
+	color: #333333;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	padding: 5px;
+	margin-left: 2px;
+	margin-top: 2px;
+	float: left;
+
+}
+
+
+.logo{
+	float: left;
+	width: 485px;
+	text-align: right;
+	margin-top: 9px;
+}
+
+.administrado{
+	float: right;
+	width: 1270px;
+	margin-top: 5px;
+	color: #1b5799;
+	text-align: center;
+}
+
+
+
+/*
+Terminan Pie con Banners y Pie con Derechos
+*/
+
+
+
+.divTitulo{
+
+  height: 40px;
+  width: 980px;
+  border-color: #222831;
+}
+
+.titulo{
+  font-size: 2em;
+	color: #231F20;
+}
+
+.subtitulo{
+  font-size: 1.5em;
+	color: #231F20;
+}
+
+.personal{
+  font-size: 1.2em;
+	color: #231F20;
+}
+
+
+
+.tituloCaja{
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  background-color:#9DB3B3  ;
+  color:#F6FFFF;
+  float: left;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  height: 40px;
+  padding: 10px 2px;
+  text-transform: uppercase;
+}
+
+
+/*CAJA CONTENIDO*/
+.divTexto{
+		margin: 10px;
+}
+
+.contenedor-imgdesc{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.cajaImagen{
+  width: 100%;
+}
+
+.imagen{
+  width: calc(100%);
+}
+.imagenP img{
+  max-width: calc(100%);
+}
+.cajaDescripcion{
+  width: 100%;
+  background-color:#C3DCDC ;
+  padding: 5%;
+
+}
+
+.cajaDescripcion p{
+    font-size: 15px;
+    line-height: inherit;
+    text-align: justify;
+
+}
+/*Sub navegadores*/
+
+.subNav{
+  display: block;
+  margin: 1% auto;
+  text-align: left;
+}
+
+
+.link{
+  color: #475B5C;
+  margin: 5px;
+}
+
+.link:hover{
+  background-color: inherit;
+  color: #006369 ;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/***************
+Imagenes
+**************/
+/*Encabezado*/
+.img-encabezado{
+  display: flex;
+}
+
+.img-ceiich:hover{
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.img-unam:hover{
+  background-color: inherit;
+  cursor: pointer !important;
+}
+/*Carrusel*/
+.img-aleatorias{
+  margin-top: 15px;
+}
+/*Informe*/
+.img-informe{
+  max-width: 170px;
+  max-height: 170px;
+}
+/*Elementos inicio*/
+.elementos-inicio img{
+  margin: 3px;
+}
+/*Mail Personal*/
+.img-mail:hover{
+	background-image: url('fondoDeAgua.png');
+	text-decoration: none;
+}
+
+/*BOTON*/
+.btnActivo{
+	background-color:#0B8080  ;
+  color: #FFFFFF!important;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+.btnNoActivo{
+	background-color:inherit;
+  transition: 0.5s;
+}
+.btnActivo:hover{
+	background-color:#0B8080!important;
+  color: #FFFFFF!important;
+  opacity: 1;
+}.btnNoActivo:hover{
+	background-color:#0B8080!important;
+  color: #FFFFFF!important;
+}
+
+.btnPrimario{
+	background-color:#505A52  ;
+  color: #FFFFFF!important;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+.btnPrimario:hover{
+	background-color:#505A52 !important;
+  color: #FFFFFF!important;
+  opacity: 1;
+}
+/*Formularios*/
+
+.recaptcha{
+  justify-content: flex-end;
+}
+
+
+/*Descripcion de programas y deptos*/
+
+.cajatitulo{
+  float: left;
+	height: 40px;
+	width: 980px;
+  border-color: #222831;
+}
+
+
+/*MODAL*/
+
+.imagen-modal{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.descripcion{
+  padding: 2em;
+  overflow-y: auto;
+  text-align:justify;
+}
+
+.opciones{
+   overflow-y:scroll;
+}
+
+/*Docentes*/
+
+.divTabla{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.derecha{
+  margin-right: 20%;
+  text-align: right;
+}
+
+.derecha img{
+  width: 30%;
+}
+
+.icon{
+  margin: 10px;
+}

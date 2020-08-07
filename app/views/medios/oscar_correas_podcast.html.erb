@@ -1,0 +1,23 @@
+<link href="50000000.css" rel="stylesheet" type="text/css" title="normal"/>
+
+<div class="contenedor clearfix">
+  <div class="cajaDelTituloDeLaPagina">
+  	<span class="nombrePagina">Voces del CEIICH</span> &nbsp;&nbsp;&nbsp;
+  </div>
+
+  <div class=podcast-individual>
+    <table>
+      <tr>
+          <td class= "podcast-ind">
+            <%= image_tag("podcast/voces/oscar_correas.jpg",class: "pod-img-ind")%>
+          </td>
+          <td class= "podcast-ind">
+            <%= audio_tag("oscar_correas.mp3",controls: true, class: "audio" )%>
+          </td>
+      </tr>
+    </table>
+    <%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>
+  </div>
+
+
+</div>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @archivofotografico.titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @archivofotografico.descripcion %>
+</p>
+
+<p>
+  <strong>Anio:</strong>
+  <%= @archivofotografico.anio %>
+</p>
+
+<p>
+  <strong>Encargado:</strong>
+  <%= @archivofotografico.encargado %>
+</p>
+
+<%= link_to 'Edit', edit_archivofotografico_path(@archivofotografico) %> |
+<%= link_to 'Back', archivofotograficos_path %>

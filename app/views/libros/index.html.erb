@@ -1,0 +1,21 @@
+<div class="contenedor">
+  <div class="divTitutlo">
+    <span class="titulo">
+      Libros
+    </span>
+  </div>
+  <div class="row">
+    <%= link_to 'Nuevo Libro', new_libro_path, class:"btn btnNoActivo" %>
+
+  </div>
+
+    <div class="row">
+      <% @libros.each do |libro|%>
+      <div class="col-md-3">
+          <%=image_tag libro.img.url(:libro)%>
+          <%= link_to 'Editar', edit_libro_path(libro), class:"link" %>
+          <%= link_to 'Destruir', libro, method: :delete, data: { confirm: 'Estas seguro?' }, class:"link" %>
+          </div>
+      <% end %>
+    </div>
+</div>

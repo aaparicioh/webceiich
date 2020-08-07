@@ -1,0 +1,56 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="titulo">
+      Transmisiones Pasadas
+    </span>
+  </div><br>
+  <%=fa_icon('backward',class: 'fas fa-backward icon')%><%= link_to "Pasadas", medios_transmisionesPasadas_path,class: "btn btnActivo"%>
+  <%= link_to "Próximas",medios_transmisionesVivo_path,class: "btn btnNoActivo"%><%=fa_icon('forward',class: 'fas fa-forward icon')%>
+
+</div>
+
+<div class="cajaDelTituloDeLaPagina">
+  	<span class="nombrePagina">Transmisiones Pasadas </span> &nbsp;&nbsp;&nbsp;
+  </div>
+  <div class="nav-transmiciones">
+    <%=fa_icon('backward',class: 'fas fa-backward fa-2x  icon-video')%><%= link_to "Pasadas",  medios_transmisionesPasadas_path,class: "transmiciones"%>
+    <%=fa_icon('forward',class: 'fas fa-forward fa-2x icon-video')%><%= link_to "Próximas", medios_transmisionesVivo_path,class: "transmiciones"%>
+  </div>
+
+
+
+  <div class="tabla-videos">
+    <table>
+      <%cont = 0%>
+        <%@medio_videos.order("created_at DESC").each do |videos|%>
+
+
+          <% if videos.fecha.strftime("%Y-%m-%d") < Time.now.strftime("%Y-%m-%d") %>
+            <%if cont == 0%>
+              <tr>
+                <td class="td-top">
+
+                <iframe width="600" height="380" src="<%=videos.url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> <br>
+                <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+                  <%= link_to "Eliminar", videos, method: :delete, data: {confirm: "Esta seguro de eliminarlo?"}, class: "btn-eliminar"%>
+                  <%= link_to "Editar", edit_medio_path(videos), class: "btn-editar"%>
+                <%end%>
+                </td>
+              <%cont = cont+1%>
+            <%else%>
+                <td class="td-top">
+
+                <iframe width="600" height="380" src="<%=videos.url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+                  <%= link_to "Eliminar", videos, method: :delete, data: {confirm: "Esta seguro de eliminarlo?"}, class: "btn-eliminar"%>
+                  <%= link_to "Editar", edit_medio_path(videos), class: "btn-editar"%>
+                <%end%>
+                </td>
+              </tr>
+              <%cont = 0%>
+            <%end%>
+          <%end%>
+        <%end%>
+    </table>
+  </div>

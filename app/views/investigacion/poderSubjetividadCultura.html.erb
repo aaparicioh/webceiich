@@ -1,0 +1,64 @@
+<%= render 'comuninvestigacion' %>
+
+<div class="contenedor">
+
+  <div class="cajaPersonal01">
+    <p  class="tituloPersonalProyecto">Personal y proyectos de investigación </p>
+
+    <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Gall Sonabend Olivia Joanna", "/investigadors/informacion/19", class: "personalAcademico" %></a><span class="cargo"> / coordinadora</span> <br />
+      <span class="proyectosDeInvestigacion">General Lázaro Cárdenas del Río: el Maximato, 1928-1934 (3a. Parte de una nueva biografía político-cultural). (Proyecto PAPIIT). </span>
+    </p>
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Cadena Roa Gerardo Jorge", "/investigadors/informacion/7", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Desafíos actuales de la democracia mexicana: problemas de representación, fragmentación de las izquierdas y los retos de la protesta social (Proyecto PAPIIT de Grupo IG300417).</span>
+    </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Del Val Blanco José Manuel", "/investigadors/informacion/14", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Evaluación crítica de la relación entre la UNAM y los pueblos indígenas.</span>
+      <span class="proyectosDeInvestigacion">Evaluación crítica de la relación entre la UNAM y los pueblos indígenas. Hacia un nuevo ciclo. Consolidación de un programa de investigación que contribuya a los procesos de democratización de nuestra sociedad en el marco del Siglo XXI. (Proyecto PAPIIT)</span>
+    </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Favela Gavia Diana Margarita", "/investigadors/informacion/17", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Sistema político y protesta social en México, 1946-2000: tendencias de cambio.</span>
+    </p>
+  </div>
+
+  <div class="cajaPersonal02">
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Juárez Gámiz Julio Vicente", "/investigadors/informacion/27", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Observatorio de medios audiovisuales y procesos electorales en México. (Proyecto PAPIIT).</span>
+    </p>
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Legorreta Díaz María del Carmen", "/investigadors/informacion/30", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Clientelismo, subjetividad y poder. Perspectivas teóricas y estudios de caso.</span>
+    </p>
+
+    <p class="tituloTecAcademicos">Personal técnico académico:</p><br>
+      <%= link_to "  Carrillo Velázquez Lucía Patricia", "/tecnicos/informacion/2", class: "personalAcademico" %><br>
+      <%= link_to "  Del Río Rodríguez Claudia Gabriela", "/tecnicos/informacion/7", class: "personalAcademico" %><br>
+      <%= link_to "  Mendizábal García Dora Evangelina", "/tecnicos/informacion/17", class: "personalAcademico" %></a><span class="cargo"> (apoyo al Programa Universitario México Nación Multicultural)</span><br>
+      <%= link_to "  Sánchez García Carolina", "/tecnicos/informacion/25", class: "personalAcademico" %></a><span class="cargo">(apoyo al Programa Universitario México Nación Multicultural)</span><br>
+
+
+  </div>
+
+  <div class="cajaPersonal03">
+
+    <p  class="tituloPersonalProyecto">Publicaciones recientes</p><br>
+
+      <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Religión, política y guerrilla en Las Cañadas de la Selva Lacandona", root_path,class: "tituloProducto"%><br>
+        <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores">María del Carmen Legorreta Díaz </span></p>
+
+      <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Desafíos de la emancipación indígena. Organización señorial y modernización en Ocosingo, Chiapas (1930-1994)", root_path,class: "tituloProducto"%><br>
+        <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> María del Carmen Legorreta Díaz</span></p>
+
+      <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Investigación-docencia interdisciplinaria, gestión del conocimiento y tecnología", root_path,class: "tituloProducto"%><br>
+        <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Lucía Patricia Carrillo Velázquez</span></p>
+
+      <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Trotsky en México y la vida política en tiempos de Lázaro Cárdenas (1937-1940)", root_path,class: "tituloProducto"%><br>
+        <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Olivia Gall</span></p>
+
+      <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Cuando el spot llega a lo local. Publicidad política en los estados de la República", root_path,class: "tituloProducto"%><br>
+        <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Julio Juárez Gámiz y Martín Echeverría Victoria</span></p>
+
+
+  </div>
+</div>

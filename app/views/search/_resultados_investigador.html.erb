@@ -1,0 +1,38 @@
+<%if !investigador.blank?%>
+<%cont = 0%>
+<span class="nombrePagina"> Resultado Investigadores </span><br>
+  <%@ruta="/investigadors/informacion/"%>
+
+      <div class="caja">
+<% investigador.each do |inv| %>
+
+
+    <%if cont == 0%>
+
+        <div class="imagen-investigadores">
+          <%if inv.foto != nil%>
+            <%= image_tag "investigadores/"+inv.foto, class: "foto-mini"%>
+          <%end%>
+        </div>
+        <div class="descripcion">
+          <%if inv.nombres != nil%>
+            <%= link_to inv.nombres+" "+inv.apPat+" "+inv.apMat, @ruta+inv.id.to_s, class: "link"%>
+          <%end%>
+        </div>
+      <%cont = 1%>
+    <%else%>
+      <div class="imagen-investigadores">
+        <%if inv.foto != nil%>
+          <%= image_tag "investigadores/"+inv.foto, class: "foto-mini"%>
+        <%end%>
+      </div>
+      <div class="descripcion">
+        <%if inv.nombres != nil%>
+          <%= link_to inv.nombres+" "+inv.apPat+" "+inv.apMat, @ruta+inv.id.to_s, class: "link"%>
+        <%end%>
+      </div>
+    <%cont = 0%>
+    <%end%>
+  <%end%>
+</div>
+<%end%>

@@ -1,0 +1,29 @@
+<%if current_admin.try(:is_admin?) or current_admin%>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%=image_tag @carrusel.img.url,class: "foto-mini" %>
+</p>
+<p>
+  <strong>Evento:</strong>
+  <%= @carrusel.event_id %> <br>
+  <%if !@carrusel.event_id.blank?%>
+  <%@events.each do |event|%>
+  <%if @carrusel.event_id == event.id%>
+    <%=event.titulo%>
+  <%end%>
+
+  <%end%>
+
+  <%end%>
+</p>
+<p>
+  <strong>Url:</strong>
+  <%= @carrusel.url %>
+</p>
+
+<%= link_to 'Editar', edit_carrusel_path(@carrusel), class: "link" %> |
+<%= link_to 'Ver todos los elementos', carrusels_path, class: "link" %>
+<%end%>

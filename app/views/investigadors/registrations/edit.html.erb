@@ -1,0 +1,131 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="titutlo">
+      Editar <%= resource_name.to_s.humanize %>
+    </span>
+  </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put },builder: BootstrapForm2Builder) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+<div class="row">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        Currently waiting confirmation for: <%= resource.unconfirmed_email %>
+      <% end %>
+
+
+      <%= f.label :nombre  %>
+      <%= f.text_field :nombres %>
+
+      <%= f.label :apellido_paterno  %>
+      <%= f.text_field :apPat %>
+
+      <%= f.label :apellido_materno  %>
+      <%= f.text_field :apMat %>
+
+      <%= f.label :investigacion_programas  %>
+      <%= f.select :programa_id,options_from_collection_for_select(Programa.all, :id, :nombre) %>
+
+      <%= f.label :nombramiento  %>
+      <%= f.select :nombramiento, [['Investigadora','Investigadora'],['Investigador','Investigador']] %>
+
+      <%= f.label :categoría  %>
+      <%= f.select :categoria, [['Titular','Titular'], ['Asociada','Asociada']] %>
+
+      <%= f.label :nivel  %>
+      <%= f.select :nivel, [['A','A'], ['B','B'], ['C','C']]%>
+
+      <%= f.label :definitividad  %>
+      <%= f.select :definitividad, [['Definitiva','Definitiva'],['Definitivo','Definitivo'], ['Interina','Interina'], ['Artículo 51','Artículo 51']] %>
+
+      <%= f.label :cargo  %>
+      <%= f.select :cargo, [['Ninguno',''], ['Director','Director'], ['Directora','Directora'], ['Secretario Académico','Secretario Académico'], ['Secretaria Académica','Secretaria Académica'], ['Secretario Técnico','Secretario Técnico'], ['Secretaria Técnica','Secretaria Técnica'], ['Secretario Administrativo','Secretario Administrativo'], ['Secretaria Administrativa','Secretaria Administrativa'], ['Jefe de Departamento','Jefe de Departamento'], ['Jefa de Departamento','Jefa de Departamento']] %>
+
+      <%= f.label :estímulos  %>
+      <%= f.select :estimulos, [['PRIDE A','Programa de Primas al Desempeño del Personal Académico de Tiempo Completo nivel A'], ['PRIDE B','Programa de Primas al Desempeño del Personal Académico de Tiempo Completo nivel B'], ['PRIDE C','Programa de Primas al Desempeño del Personal Académico de Tiempo Completo nivel C'],['PRIDE D','Programa de Primas al Desempeño del Personal Académico de Tiempo Completo nivel D']] %>
+
+      <%= f.label :afiliaciones  %>
+      <%= f.select :sociedades, [['Ninguna',''],['SNI I','Sistema Nacional de Investigadores nivel I'], ['SNI II','Sistema Nacional de Investigadores nivel II'], ['SNI III','Sistema Nacional de Investigadores nivel III']] %>
+
+      <%= f.label :adscripción   %>
+      <%= f.select :adscripcion, [['Ninguna',''],['Publicaciones','Publicaciones'],['Cómputo','Cómputo'],['Difusión','Difusión'],['Información y documentación','Información y documentación'],['Producción audiovisual y multimedia','Producción audiovisual y multimedia'],['Docencia, educación continua y diplomados','Docencia, educación continua y diplomados'],['Histora de la Ciencia','Histora de la Ciencia'],['Ciencia y Tecnología','Ciencia y Tecnología'],['Ciencias Sociales y Literatura','Ciencias Sociales y Literatura'],['Cibercultura y Desarrollo de Comunidades de Conocimiento','Cibercultura y Desarrollo de Comunidades de Conocimiento'],['El Mundo en el Siglo XXI','El Mundo en el Siglo XXI'],['Ciudades, Gestión, Territorio y Ambiente','Ciudades, Gestión, Territorio y Ambiente'],['La Producción de Bienes y Servicios Básicos','La Producción de Bienes y Servicios Básicos'],['Poder, Subjetividad y Cultura','Poder, Subjetividad y Cultura'],['Investigación Feminista','Investigación Feminista'],['Derecho y Sociedad','Derecho y Sociedad'],['Estudios Visuales','Estudios Visuales']] %>
+
+      <%= f.label :historia_Academica  %>
+      <%= f.text_field :historiaAcademica, autofocus: true %>
+
+      <%= f.label :teléfono  %>
+      <%= f.text_field :telefono, autofocus: true %>
+
+      <%= f.label :extensión  %>
+      <%= f.text_field :extension, autofocus: true%>
+
+
+
+
+    <%= f.label 'organosColegiados' %><br />
+    <div class="col-md-4">
+      <%= f.collection_check_boxes :organocolegiado_ids, Organocolegiado.all, :id, :nombre do |b| %>
+          <%= b.check_box %>
+          <%= b.label %>
+      <% end %>
+    </div>
+
+
+
+
+      <%= f.label :cargo_consejo_interno  %>
+      <%= f.select :cargoConsejoInterno, [['Ninguno',''], ['Presidente','Presidente'], ['Presidenta','Presidenta'], ['Secretario','Secretario'], ['Secretaria','Secretaria'], ['Representantes del personal de investigación','Representantes del personal de investigación'], ['Representante del personal técnico académico','Representante del personal técnico académico']] %>
+
+      <%= f.label :humanindex  %>
+      <%= f.text_field :humanindex, autofocus: true %>
+
+      <%= f.label :podcast  %>
+      <%= f.text_field :podcast, autofocus: true %>
+
+      <%= f.label :nombre_de_fotografía  %>
+      <%= f.text_field :foto, autofocus: true %>
+
+      <div class="divTitulo col-md-12">
+        <span class="subtitulo">
+          Cambiar contraseña
+        </span>
+      </div>
+
+      <%= f.label :contraseña %>
+      <%= f.password_field :password, autocomplete: "new-password" %>
+      <% if @minimum_password_length %>
+      <div class="col-md-6">
+        <em><%= @minimum_password_length %> carácteres mínimo</em>
+      </div>
+      <% end %>
+
+      <%= f.label :confirmar_contraseña %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+
+    <div class="divTitulo col-md-12">
+      <span class="subtitulo">
+        Ingresar su contraseña para confirmar cambios
+      </span>
+    </div>
+      <%= f.label :Contraseña_actual %>
+      <%= f.password_field :current_password, autocomplete: "current-password" %>
+
+
+      <%= f.submit "Update" %>
+
+    <% end %>
+    <div class="divTitulo col-md-4">
+      <span class="subtitulo">
+        Cancelar cuenta
+      </span>
+    </div>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class:"btn btnNoActivo"%>
+
+
+    </div>
+    <%= link_to "Back", :back %>
+  </div>
+</div>

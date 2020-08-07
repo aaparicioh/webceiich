@@ -1,0 +1,44 @@
+<%= render 'comuninvestigacion' %>
+
+  <div class="contenedor">
+    <br>
+    <div class="divTitulo">
+        <span class="subtitulo">Personal y proyectos de investigación</span>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+
+        <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Guerrero Mc Manus Siobhan Fenella", "/investigadors/informacion/23", class: "personal link" %></a><span class="cargo"> / coordinadora</span> <br />
+          <span class="proyectosDeInvestigacion">La ciencia y el sujeto homosexual mirados desde México. Un análisis histórico-filosófico. </span>
+        </p>
+
+        <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  López Caballero Paula", "/investigadors/informacion/32", class: "personal link" %><br>
+          <span class="proyectosDeInvestigacion"> Pensar la alteridad en México (siglos XX y XXI). Estado, ciencia y categorías de identificación en la política indigenista ayer y hoy.</span>
+        </p>
+
+        <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Mateos González Gisela Tamhara", "/investigadors/informacion/37", class:  "personal link" %><br>
+          <span class="proyectosDeInvestigacion">Genes y átomos en México durante la Guerra Fría.Física y ciencias de la vida en la posguerra: el papel de las relaciones interamericanas en la circulación de conocimiento (Proyecto PAPIIT).</span>
+        </p>
+
+        <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Morales Sarabia Rosa Angélica", "/investigadors/informacion/39", class: "personal link" %><br>
+          <span class="proyectosDeInvestigacion">Las exploraciones botánicas y su influencia en la conformación de redes de investigación en la segunda mitad del Siglo XIX. La construcción cultural de la ignorancia (agnotology) en torno a las plantas medicinales en México (XVI-XIX). (Proyecto PAPIIT).</span>
+        </p>
+        <p><br />
+        </p>
+      </div>
+      <div class="col-md-4">
+        <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Niccolai Salvadori Sergio", "/investigadors/informacion/42", class: "personal link" %><br>
+          <span class="proyectosDeInvestigacion">Fundamentos teóricos y metodológicos para el estudio, la conservación y la valorización del patrimonio industrial histórico.</span>
+        </p>
+        <p class="subtitulo">Personal técnico académico:</p><br>
+          <%= link_to "  García Bravo María Haydeé", "/tecnicos/informacion/10", class: "personal link" %><br>
+      </div>
+      <div class="col-md-4">
+        <%=render 'publicaciones' , publicacion: @publicacion , programa: @programa.id %>
+      </div>
+    </div>
+  <div class="row">
+    <%=render '/publicaciones/form' , publicacion: @publicacion , programa: @programa.nombre %>
+  </div>
+  </div>

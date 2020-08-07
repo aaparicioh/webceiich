@@ -1,0 +1,16 @@
+
+
+        <%= render "multimedia"%>
+				<div class="cajadatosDepartamentos">
+					<div class="botones">
+						<%= link_to "Personal","produccionAudiovisual",class: "btnDepoNoActivo"%>
+						<%= link_to "Producciones","pAV_producciones",class: "btnDepoNoActivo"%>
+            <%= link_to "Repositorio","http://132.248.246.141:8080/jspui/", target:"_blank",class: "btnDepoNoActivo"%>
+						<%= link_to "Sitios de interés","pAV_sitiosinteres",class: "btnDepoActivo"%>
+					</div>
+
+          <div class="parrafo">
+            <p align="center"><%=fa_icon('globe-americas',class: 'fas fa-globe-americas icon-publicacion')%><a href="http://www.contraelsilencio.org/">  http://www.contraelsilencio.org/</a></p>
+            <p align="center"><%=fa_icon('globe-americas',class: 'fas fa-globe-americas icon-publicacion')%><a href="http://www.prodocumentales.org/paginas/muestra/10muestra/documentales10mamlat.php">  http://www.prodocumentales.org/paginas/muestra/10muestra/documentales10mamlat.php</a></p>
+          </div>
+				</div>

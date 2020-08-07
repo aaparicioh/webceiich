@@ -1,0 +1,11 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="titulo">
+      Nuevo Programa
+    </span>
+  </div>
+  <br>
+  <%= render 'form', modelo: @programa %>
+
+  <%= link_to 'Ver todos', programas_path, class:"btn btnActivo" %>
+</div>

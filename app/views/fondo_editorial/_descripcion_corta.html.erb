@@ -1,0 +1,30 @@
+<p>
+  <strong>Clave:</strong>
+  <%= libro.clave %> <br>
+  <strong>Titulo:</strong>
+  <%= libro.titulo %><br>
+  <%if libro.autor != nil and libro.autor != ""%>
+    <strong>Autor:</strong>
+    <%= libro.autor %><br>
+  <%end%>
+  <%if libro.coordinador != nil and libro.coordinador != ""%>
+    <strong>Coordinador:</strong>
+    <%= libro.coordinador %><br>
+  <%end%>
+  <strong>Coleccion:</strong>
+  <%= libro.coleccion_id %><br>
+  <strong>Tematica:</strong>
+  <%= libro.tematica_id %><br>
+  <strong>Edicion:</strong>
+  <%= libro.edicion %><br>
+  <strong>Anio:</strong>
+  <%= libro.anio %><br>
+  <strong>Paginas:</strong>
+  <%= libro.paginas %><br>
+  <strong>Isbn:</strong>
+  <%= libro.isbn %><br>
+  <strong>Precio:</strong>
+  <%= libro.precio %><br>
+  <strong>Descriptores:</strong>
+  <%= libro.descriptores.try(:html_safe)  %><br>
+</p>

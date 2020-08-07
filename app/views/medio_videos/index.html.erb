@@ -1,0 +1,26 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="titulo">
+      Videos en medios
+    </span>
+  </div>
+  <div class="col md 12">
+    <%= link_to 'Nuevo video en Medios', new_medio_video_path, class:"btn btnNoActivo" %>
+  </div>
+  <div class="row">
+    <% @medio_videos.each do |medio_video| %>
+
+      <div class="col-md-6">
+        <%= medio_video.url %>
+      </div>
+        <div class="col-md-6">
+          <%= medio_video.fecha %>
+          <%= link_to 'Edit', edit_medio_video_path(medio_video), class:"link" %>
+          <%= link_to 'Destroy', medio_video, method: :delete, data: { confirm: 'Are you sure?' },class:"link" %>
+        </div>
+
+
+    <% end %>
+
+  </div>
+</div>

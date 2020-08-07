@@ -1,0 +1,2 @@
+class TipoArchivo < ApplicationRecord
+end

@@ -1,0 +1,28 @@
+<link href="archivo_fotografico.css" rel="stylesheet" type="text/css" title="normal"/>
+
+<div class="contenedor">
+  <div class="contenedor">
+    <div class="cajaDelTituloDeLaPagina">
+      <span class="nombrePagina">Archivo Fotográfico 2007</span>
+    </div>
+  <%=render "nav_fotos"%>
+  <%=@anio%>
+  <div class="tabla">
+
+      <%@archivofotograficos.each do |archivo|%>
+        <%if archivo.anio == "2007"%>
+        <div class="div-fotos">
+          <%= image_tag "#{archivo.foto}"%>
+          <p  class="descripcion-foto">
+            <%=archivo.descripcion%>
+          </p>
+          <p  class="participantes-foto">
+            <%=archivo.participantes%>
+          </p>
+
+        </div>
+        <%end%>
+      <%end%>
+
+  </div>
+</div>

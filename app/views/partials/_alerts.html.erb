@@ -1,0 +1,22 @@
+<% unless notice.nil? %>
+  <div class="col-md-12">
+    <div class="alert alert-info alert-dismissible fade show my-3" role="alert">
+      <strong>Mensaje:</strong>
+      <%= notice %>
+      <button aria-label="Close" class="close" data-dismiss="alert" type="buton">
+        <span aria-hidden="true">x</span>
+      </button>
+    </div>
+  </div>
+<% end %>
+<% unless alert.nil? %>
+  <div class="col-md-12">
+    <div class="alert alert-info alert-dismissible fade show my-3" role="alert">
+      <strong>Alerta:</strong>
+      <%= alert %>
+      <button aria-label="Close" class="close" data-dismiss="alert" type="buton">
+        <span aria-hidden="true">x</span>
+      </button>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module ArchivofotograficosHelper
+end

@@ -1,0 +1,2 @@
+class MedioVideo < ApplicationRecord
+end

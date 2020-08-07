@@ -1,0 +1,127 @@
+
+  <div class="header">
+    <%= link_to image_tag("encabezadoLogo01.png"), "https://www.unam.mx", target: "_blank", title:"Visita la web de la UNAM", border: "0",class: "img-unam"%>
+    <%= link_to image_tag("encabezadoLogo02.png"), root_path,  title:"Regreso home del CEIICH", border:"0", class: "img-ceiich" , id: "img-Ceiich" %>
+
+  </div>
+
+  <nav id= "nav">
+    <ul class="ul-principal">
+      <li><span class="ocultarimg">Acerca del CEIICH</span>
+        <ul>
+          <li class="ocultarimg"><%=link_to "Objetivos", acerca_objetivos_path%></li>
+          <li class="ocultarimg"><%=link_to "Historia", acerca_historia_path%></li>
+          <li class="ocultarimg"><%= link_to "Personal Académico", acerca_personalAcademicoInvestigacion_path %></li>
+          <li class="ocultarimg"><%= link_to "Dirección", acerca_direccion_path %></li>
+          <li class="ocultarimg"><%= link_to "Órganos Colegiados", root_path %></li>
+          <li class="ocultarimg"><%= link_to "Espacio Informativo Interno", acerca_espacioInformativo_path %></li>
+          <li class="ocultarimg"><%= link_to "Informes de Actividades", acerca_informesActividades_path %></li>
+          <li class="ocultarimg"><%= link_to "Numeralia", acerca_numeralia_path %></li>
+          <li class="ocultarimg"><%= link_to "Ubicación", acerca_ubicacion_path %></li>
+        </ul>
+      </li>
+      <li><span class="ocultarimg">Investigación</span>
+        <ul >
+
+          <li class="ocultarimg"><%= link_to "Historia de la Ciencia", investigacion_historiaCiencia_path %></li>
+          <li class="ocultarimg"><%= link_to "Ciencia y Tecnología", investigacion_cienciaTecnologia_path %></li>
+          <li class="ocultarimg"><%= link_to "Ciencias Sociales y Literatura", investigacion_cienciasSocialesLiteratura_path %></li>
+          <li class="ocultarimg"><%= link_to "Cibercultura y Desarrollo de Comunidades de Conocimiento", investigacion_cibercultura_path %></li>
+          <li class="ocultarimg"><%= link_to "El Mundo en el Siglo XXI", investigacion_mundoSigloXXI_path %></li>
+          <li class="ocultarimg"><%= link_to "Ciudades, Gestión, Territorio y Ambiente", investigacion_ciudadesGestion_path %></li>
+          <li class="ocultarimg"><%= link_to "La producción de Bienes y Servicios Básicos", investigacion_produccionBienesServicios_path %></li>
+          <li class="ocultarimg"><%= link_to "Poder, Sujetividad y Cultura", investigacion_poderSubjetividadCultura_path %></li>
+          <li class="ocultarimg"><%= link_to "Investigación Feminista", investigacion_feminista_path %></li>
+          <li class="ocultarimg"><%= link_to "Derecho y Sociedad", investigacion_derechoSociedad_path %></li>
+          <li class="ocultarimg"><%= link_to "Estudios Visuales", investigacion_estudiosVisuales_path %></li>
+
+
+        </ul>
+      </li>
+      <li><span class="ocultarimg">Departamentos Técnicos</span>
+        <ul>
+          <li class="ocultarimg"><%= link_to "Cómputo" , departamentos_tecnicos_computo_path, id: "computo"%></li>
+          <li class="ocultarimg"><%= link_to "Difusión", departamentos_tecnicos_difusion_path %></li>
+          <li class="ocultarimg"><%= link_to "Información y Documentación", departamentos_tecnicos_informacionDocumentacion_path %></li>
+          <li class="ocultarimg"><%= link_to "Producción Audiovisual y Multimedia", departamentos_tecnicos_produccionAudiovisual_path %></li>
+          <li class="ocultarimg"><%= link_to "Publicaciones", departamentos_tecnicos_publicaciones_path %></li>
+        </ul>
+
+      </li>
+      <li><span>Docencia</span>
+        <ul>
+          <li><%= link_to "Acerca de", docencia_acercaDe_path %></li>
+          <li><%= link_to "Modalidades", docencia_modalidades_path %></li>
+          <li><%= link_to "Actividades Docentes", docencia_actividadesDocentes_path %></li>
+          <li><%= link_to "Numeralia", docencia_numeralia_path %></li>
+        </ul>
+      </li>
+      <li><span>Fondo Editorial</span>
+        <ul>
+          <li><%= link_to "Novedades", fondo_editorial_novedades_path %></li>
+          <li><%= link_to "Libros",  fondo_editorial_libros_tematica_url %></li>
+          <li><%= link_to "Revistas", fondo_editorial_revistas_path %></li>
+          <li><%= link_to "Video", fondo_editorial_video_path %></li>
+          <li><%= link_to "Repositorio", "http://132.248.246.141:8080/jspui/" %></li>
+          <li><%= link_to "Ventas y Distribución", fondo_editorial_ventasDistribucion_path %></li>
+        </ul>
+      </li>
+      <li><span>Actividades</span>
+        <ul style="width:28em;">
+          <li><%= link_to "Próximas Actividades Académicas", actividades_academicas_proximasActividades_path %></li>
+          <% link_to "Agenda 2018", actividades_academicas_agenda_path %>
+          <li><%= link_to "Años Anteriores", actividades_academicas_anteriores_path %></li>
+          <li><%= link_to "Archivo Fotográfico", actividades_academicas_archivoFotografico_path %></li>
+        </ul>
+      </li>
+      <li><span>Medios</span>
+        <ul style="width:22em;">
+          <li><%= link_to "Transmisiones en Vivo", medios_transmisionesVivo_path %></li>
+          <li><%= link_to "Transmisiones pasadas", medios_transmisionesPasadas_path %></li>
+          <li><%= link_to "Producciones audiovisuales", "http://www.medios.ceiich.unam.mx", target: "_blank" %></li>
+          <li><%= link_to "Podcast", medios_podcast_path %></li>
+        </ul>
+      </li>
+      <li >
+        <%= link_to "Biblioteca", "http://biblio.unam.mx/ceiich/", target: "_blank", :class=>"interdisciplina" %>
+      </li>
+    </ul>
+
+    <div class="action-group">
+
+      <%= form_tag(search_index_path, method: :get) do %>
+      <%= label_tag(:search, "Buscador:") %>
+      <%= text_field_tag :search, params[:search]%>
+      <%= button_tag(type: "submit", class: "btn btn-default") do %>
+      <%=fa_icon('search',class: 'fas fa-search fa-2x icono')%>
+      <% end %>
+      <% submit_tag( "BUSCAR") %>
+      <% end %>
+
+      <div class="icons otras_pag">
+        <%= link_to fa_icon('facebook-square',class: 'fab fa-facebook-square fa-2x icono i-facebook'), "https://www.facebook.com/ceiich.unam.mx", target: "_blank"%>
+        <%= link_to fa_icon('youtube',class: 'fab fa-youtube fa-2x icono i-youtube'), "https://www.youtube.com/user/CEIICHUNAM", target: "_blank" %>
+        <%= link_to fa_icon('twitter-square',class: 'fab fa-twitter-square fa-2x icono i-twitter'), "https://twitter.com/ceiich_unam", target: "_blank" %>
+        <%= link_to fa_icon('instagram',class: 'fab fa-instagram fa-2x icono i-instagram'), "https://www.instagram.com/ceiich_unam/", target: "_blank" %>
+        <%= link_to image_tag("ingles.jpg"),"/principal/ceiich_ingles", target: "_blank", title: "ceiich-ingles", border:"0", class: "icono"%>
+      </div>
+      <%if admin_signed_in?%>
+      <%= link_to "Cerrar sesión", destroy_admin_session_path,remote: true, method: :delete, class:"btn btnNoActivo"%>
+      <%else%>
+      <%= link_to "Admin",new_admin_session_path, class:"btn btnNoActivo"%>
+      <%end%>
+
+      <%if confianza_signed_in?%>
+      <%= link_to "Cerrar sesión confianza", destroy_confianza_session_path,remote: true, method: :get, class:"btn btnNoActivo"%>
+      <%else%>
+      <%= link_to "Confianza",new_confianza_session_path, class:"btn btnNoActivo"%>
+      <%end%>
+
+      <%if tecnico_signed_in?%>
+      <%= link_to "Cerrar sesión tecnico", destroy_tecnico_session_path,remote: true, method: :get, class:"btn btnNoActivo"%>
+      <%else%>
+      <%= link_to "Tecnico",new_tecnico_session_path, class:"btn btnNoActivo"%>
+      <%end%>
+    </div>
+
+  </nav>

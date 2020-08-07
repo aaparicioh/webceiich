@@ -1,0 +1,2 @@
+class Medio < ApplicationRecord
+end

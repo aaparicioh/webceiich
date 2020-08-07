@@ -1,0 +1,24 @@
+<div class="contenedor">
+  <%= form_with(model: investigador, local: true) do |form| %>
+    <% if investigador.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(investigador.errors.count, "error") %> prohibited this investigacion_programa from being saved:</h2>
+
+        <ul>
+        <% investigador.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div>
+      <h1 align="center">
+      <%= form.label :Lineas_de_investigación %></h1>
+      <%= form.cktext_area :lineasDeInvestigacion,id: "lineasDeInvestigacion_id",ckeditor: { uiColor: '#CFD3D3 '} %>
+
+      <div class="actions">
+        <%= form.submit :actualizar %>
+      </div>
+    </div>
+  <% end %>
+</div>

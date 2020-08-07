@@ -1,0 +1,21 @@
+
+<%= render "investigador"%>
+
+<% if (signed_in? and ((current_investigador and (current_investigador.email == @investigador.email)) or (current_admin.try(:is_admin?) or current_admin.try(:is_editor?)) ))%>
+
+		<%= render 'form_publicaciones', investigador: @investigador %>
+		<div class="texto-informacion">
+			<%= @investigador.publicaciones.try(:html_safe)%>
+
+		</div>
+
+<%else%>
+
+	<div class="texto-informacion">
+			<h1 align="center"  class="titulo">Publicaciones</h1>
+		<%= @investigador.publicaciones.try(:html_safe)%>
+
+
+
+</div>
+<%end%>

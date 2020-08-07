@@ -1,0 +1,40 @@
+<%= form_with(model: revista, local: true) do |form| %>
+  <% if revista.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(revista.errors.count, "error") %> prohibited this revista from being saved:</h2>
+
+      <ul>
+      <% revista.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="field">
+      <%= form.label :coleccion %>
+      <%= form.select :coleccion, [['interdiciplina','interdiciplina'],['crítica jurídica','crítica jurídica']] %>
+    </div>
+    <div class="field">
+      <%= form.label :descripcion %>
+      <%= form.text_field :descripcion %>
+    </div>
+
+    <div class="field">
+      <%= form.label :pdf %>
+      <%= form.file_field :pdf%>
+    </div>
+
+    <div class="field">
+      <%= form.label :img %>
+      <%= form.file_field :img%>
+    </div>
+
+    <div class="field">
+      <%= form.label :link %>
+      <%= form.text_field :link %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>

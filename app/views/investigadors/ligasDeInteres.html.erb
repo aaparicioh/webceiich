@@ -1,0 +1,17 @@
+<%= render "investigador"%>
+
+<% if signed_in? and current_investigador and (current_investigador.email == @investigador.email)%>
+	<div class="contenedor clearfix">
+		<%= render 'form_ligasDeInteres', investigador: @investigador %>
+		<div class="texto-informacion">
+			<%= @investigador.ligasDeInteres.try(:html_safe)%>
+		</div>
+	</div>
+<%else%>
+<div class="contenedor">
+	<div class="texto-informacion">
+		<h1 align="center"  class="titulo">Ligas de Interés</h1>
+		<%= @investigador.ligasDeInteres.try(:html_safe)%>
+	</div>
+</div>
+<%end%>

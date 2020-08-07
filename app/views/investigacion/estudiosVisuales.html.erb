@@ -1,0 +1,53 @@
+<%= render 'comuninvestigacion' %>
+
+<div class="contenedor">
+
+  <div class="cajaPersonal01">
+    <p  class="tituloPersonalProyecto">Personal y proyectos de investigación </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Sánchez Menchero Mauricio", "/investigadors/informacion/46", class: "personalAcademico" %></a><span class="cargo"> / coordinador</span> <br />
+      <span class="proyectosDeInvestigacion">Proyecto colectivo: Del gabinete de maravillas al museo anatómico popular. regímenes de exhibición y cultura material de la medicina (Plan Nacional de Investigación, del Ministerio de Economía y Competitividad, España) Proyecto individual: Memorias visuales de la corporalidad y las emociones en las fotografías de estudio (1880-1911)</span>
+    </p>
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Köppen Prubmann Elke", "/investigadors/informacion/28", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">La información visual en la producción y transmisión del conocimiento.</span>
+    </p>
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Quesada García Octavio", "/investigadors/informacion/44", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Estudios interdisciplinarios de las imágenes antiguas mexicanas.</span>
+      <span class="proyectosDeInvestigacion">Base de Datos Iconográficos de Mesoamérica.</span>
+      <span class="proyectosDeInvestigacion">Iconografía de Los Andes.</span>
+    </p>
+
+
+  </div>
+  <div class="cajaPersonal02">
+    <p><%= image_tag("iconAcademicoH.png") %><span class="personalAcademicoSinLiga">Minerva Rojas Ruiz </span> <span class="proyectosDeInvestigacion">(Becaria postdoctoral)</span><br />
+      <span class="proyectosDeInvestigacion">Los niños en el Museo Nacional de Antropología. Una mirada crítica del "adultocentrismo" en la recepción del discurso museográfico.</span>
+    </p>
+    <p class="tituloTecAcademicos">Personal técnico académico:</p><br>
+      <%= link_to "  Flores Villela Carlos Arturo", "/tecnicos/informacion/13", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion"> La nueva estética del cine mexicano: Reygadas, Pereda, Eimbcke y Escalante</span>.
+
+  </div>
+
+<div class="cajaPersonal03">
+  <p  class="tituloPersonalProyecto">Publicaciones recientes</p><br>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Discurso y descolonización en México y América Latina", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores">Octavio Quesada García, Lilian Álvarez Arellano, Adalberto Santana </span></p>
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  John Lennon. Un humanista subversivo", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores">Elvira Concheiro, Carlos Flores y Julio Muñoz Rubio </span></p>
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "La imagen de Cocijo y el lenguaje visual antiguo mexicano  ", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Octavio Quesada García </span></p>
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to " Signa Naturalia. Concepciones y prácticas en torno a la materia médica, la farmacia y la salud (siglos XVI-XX)  ", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Angélica Morales Sarabia y Mauricio Sánchez Menchero</span></p>
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Los trazos de las ciencias. Circulación del conocimiento en imágenes", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Elke Köppen y Mauricio Sánchez Menchero</span></p>
+
+</div>
+
+</div>
+
+
+
+
+</div>

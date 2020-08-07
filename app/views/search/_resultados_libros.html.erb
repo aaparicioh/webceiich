@@ -1,0 +1,26 @@
+
+<%if !libros.nil? and !libros.blank?%>
+<span class="nombrePagina"> Resultado en libros </span>
+
+  <%cont = 0%>
+  <%$contmodal=1%>
+  <div class="row">
+      <%libros.order(clave: :desc).each do |libro|%>
+        <div class="col-md-2 text-center">
+          <%@LibroModal="LibroModal"+$contmodal.to_s%>
+          <%=image_tag libro.img.url(:libro), data: { target: "##{@LibroModal}", toggle: "modal"}, class: "rounded"%>
+          <%=render "/fondo_editorial/modal", libro: libro%>
+          <%$contmodal=$contmodal+1%>
+        </div>
+        <div class="col-md-4">
+          <%=render "/fondo_editorial/descripcion_corta",libro:libro%>
+        </div>
+      <%end%>
+  </div>
+
+
+
+
+
+
+<%end%>

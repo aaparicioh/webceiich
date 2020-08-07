@@ -1,0 +1,41 @@
+<div class="contenedor">
+	<div class="divTitulo">
+		<span class="titulo">
+			Personal Académico
+		</span>
+	</div>
+	<br>
+	<div class="row">
+		<%= link_to "De Investigación", acerca_personalAcademicoInvestigacion_path, class:"btn btnNoActivo" %>
+		<%= link_to "Técnico Académico", acerca_personalAcademicoTecnico_path, class:"btn btnActivo" %>
+	</div>
+	<br>
+
+	<div align="center">
+		<%@tecnicos.each do |tec|%>
+			<% if tec.id%2 == 1 %>
+				<br/><div class="row">
+			<% end %>
+				<div class="col-md-2">
+					<%if tec.foto != nil && !tec.foto.blank?%>
+						<%= image_tag "tecnicos/"+tec.foto, class: "imagen"%>
+					<%end%>
+				</div>
+				<div class="col-md-2 d-flex align-items-center">
+					<% id=tec.id.to_s %>
+					<% ruta="/tecnicos/informacion/"+id  %>
+					<%if ruta != nil && tec.apMat != nil && tec.apPat != nil %>
+						<%= link_to tec.apPat+" "+tec.apMat+" "+tec.nombres, ruta, class: "link " %>
+					<%end%>
+				</div>
+				<div class="col-md-1 d-flex align-items-center">
+					<%= mail_to tec.email do %>
+						<%= image_tag "contacto.png", border: 0, class: "img-mail" %>
+					<%end%>
+				</div>
+			<% if tec.id%2 == 0 %>
+				</div>
+			<% end %>
+		<%end%>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+<link href="20000000.css" rel="stylesheet" type="text/css" title="normal"/>
+<div class="contenedor">
+
+        <div class="CajaNombreProgramas">
+            <span class="nombreProgramas">&nbsp;&nbsp;Producción Audiovisual y multimedia&nbsp;&nbsp;</span>
+        </div>
+				<div class="contenedor-imgdesc clearfix">
+					<div class="cajaImagenPrograma">
+	            <%= image_tag("departamentosTecnicos/Audiovisual.jpg", class: "imagenPrograma") %>
+	        </div>
+	        <div class="cajaDescripcionPrograma">
+	            <p class="descripcionPrograma centrar-v"><span class"FichaContenido">Produce materiales audiovisuales que promueven y dan cuenta de la labor académica del CEIICH, como documentales, cápsulas, videos promocionales y multimedia. También coordina la transmisión en vivo de los encuentros académicos y los enlaces vía videoconferencia, así como el diseño y mantenimiento de la página web.</span></p>
+	        </div>
+				</div>
+
+				<div class="cajadatosDepartamentos">
+					<div class="botones">
+						<%= link_to "Personal","produccionAudiovisual",class: "btnDepoNoActivo"%>
+						<%= link_to "Producciones","pAV_producciones",class: "btnDepoNoActivo"%>
+						<%= link_to "Acceso Abierto","acceso_abierto",class: "btnDepoActivo"%>
+						<%= link_to "Sitios de interés","pAV_sitiosinteres",class: "btnDepoNoActivo"%>
+					</div>
+							<div class="parrafo">
+                <p align="left"><%=fa_icon('link',class: 'fas fa-link icon-publicacion')%><%= link_to "   Multimedias-CD ROMs",root_path%></p>
+    						<p align="left"><%=fa_icon('link',class: 'fas fa-link icon-publicacion')%><%= link_to "   Este día 1968","/medios/estedia"%></p>
+    						<p align="left"><%=fa_icon('link',class: 'fas fa-link icon-publicacion')%><%= link_to "   Saber y poder",root_path%></p>
+    						<p align="left"><%=fa_icon('link',class: 'fas fa-link icon-publicacion')%><%= link_to "   Trayectorias Académicas",root_path%></p>
+                <p align="left"><%=fa_icon('link',class: 'fas fa-link icon-publicacion')%><%= link_to "   Voces del CEIICH","/medios/voces"%></p>
+                <p align="left"><%=fa_icon('link',class: 'fas fa-link icon-publicacion')%><%= link_to "   Otros videos",root_path%></p>
+              </div>
+				</div>
+</div>

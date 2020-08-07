@@ -1,0 +1,65 @@
+<%= render 'comuninvestigacion' %>
+
+<div class="contenedor">
+
+  <div class="cajaPersonal01">
+    <p  class="tituloPersonalProyecto">Personal y proyectos de investigación </p>
+
+    <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Leal Martínez Alejandra María", "/investigadors/informacion/29", class: "personalAcademico" %></a><span class="cargo"> / coordinadora</span> <br />
+      <span class="proyectosDeInvestigacion">Conflictos socioambientales en la Ciudad de México. Una ecología política. </span>
+    </p>
+
+    <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Álvarez Enríquez Lucía", "/investigadors/informacion/3", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion" >Diversidad y multiculturalidad en grandes ciudades.</span>
+      <span class="proyectosDeInvestigacion">La construcción de ciudadanía en la Ciudad de México. (Proyecto PAPIIT).</span>
+    </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Delgado Ramos Gian Carlo", "/investigadors/informacion/15", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Incertidumbres de la ciencia y la tecnología en el Siglo XXI: su manejo social y ambiental.</span>
+      <span class="proyectosDeInvestigacion">Valoración del metabolismo urbano en la Ciudad de México y sus impactos socioeconómicos frente al cambio climático. (Proyecto PInCC)</span>
+    </p>
+
+  </div>
+  <div class="cajaPersonal02">
+
+    <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Loeza Reyes Laura", "/investigadors/informacion/31", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Identidades y memoria en las redes de organizaciones civiles mexicanas.</span>
+    </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to " Morales Barragán José Federico", "/investigadors/informacion/38", class: "personalAcademico" %><br>
+
+    <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Muna Makhlouf De la Garza", "/investigadors/informacion/15", class: "personalAcademico" %><br></a><span class="cargo"> (Becaria postdoctoral)</span> <br />
+      <span class="proyectosDeInvestigacion">Resistencias a la configuración de la ciudad neoliberal.</span>
+      <span class="proyectosDeInvestigacion">Actores organizados de barrios y colonias afectados por un megaproyecto urbano en la delegación Tlalpan, Ciudad de México.</span>
+    </p>
+
+</div>
+
+<div class="cajaPersonal03">
+
+  <p  class="tituloPersonalProyecto">Publicaciones recientes</p><br>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Derechos humanos y violencia en México", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Laura Loeza Reyes y Analiese Richard</span></p>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to " Diálogo Mexicano de Talanoa", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Gian Carlo Delgado Ramos, Maryke van Staden y Edgar Villaseñor Franco</span></p>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Six research priorities for cities and climate change en Nature, Marzo de 2018", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Gian Carlo Delgado, Xuemei Bai, Richard J. Dawson, y otros</span></p>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Climate change-sensitive cities", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Gian Carlo Delgado</span></p>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Pueblo, ciudadanía y sociedad civil. Aportes para un debate", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Lucía Álvarez</span></p>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Los desafíos de la ciudad del siglo XXI", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Lucía Álvarez Enríquez, Gian Carlo Delgado y Alejandra Leal Martínez</span></p>
+
+</div>
+
+</div>
+
+
+</div>

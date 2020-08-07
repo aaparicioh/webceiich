@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="mx-auto col-md-6 col-10">
+    <%= form_with(model: modelo, local: true,builder: BootstrapFormBuilder) do |form| %>
+    <%= render "partials/error_form", :modelo => modelo%>
+
+    <div class="row">
+      <%= form.label :titulo %>
+      <%= form.text_field :titulo %>
+    </div>
+
+    <div class="row">
+      <%= form.label :descripcion %>
+      <%= form.text_field :descripcion %>
+    </div>
+
+    <div class="row">
+      <%= form.label :anio %>
+      <%= form.text_field :anio %>
+    </div>
+
+    <div class="row">
+      <%= form.label :encargado %>
+      <%= form.text_field :encargado %>
+    </div>
+
+    <div class="row">
+      <%= form.submit "Nuevo archivo fotografico" %>
+    </div>
+    <% end %>
+  </div>
+</div>

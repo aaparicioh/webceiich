@@ -1,0 +1,28 @@
+<div class="contenedor">
+  <p id="notice"><%= notice %></p>
+  <div class="divTitulo">
+    <span class="titulo">
+      Organos Colegiados
+    </span>
+  </div>
+  <br>
+  <div class="row">
+    <% @organocolegiados.each do |organocolegiado| %>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-4">
+      <%= organocolegiado.nombre %>
+    </div>
+
+    <div class="col-md-4">
+      <%= link_to 'Editar', edit_organocolegiado_path(organocolegiado),class:"link" %>
+      <%= link_to 'Destruir', organocolegiado, method: :delete, data: { confirm: 'Esta seguro?' },class:"link" %>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <% end %>
+  </div>
+  <%= link_to 'Nuevo Organo Colegiado', new_organocolegiado_path, class:"btn btnActivo" %>
+</div>

@@ -1,0 +1,26 @@
+<div class="contenedor">
+
+	<%=render "/principal/imagen_inicio"%>
+	<br><br>
+	<%=render "/principal/carrusel"%>
+	<br>
+	<div class="row">
+		<div class="col-md-6">
+				<%=render "/principal/elementos_principales"%>
+				<%= link_to image_tag("aviso02.jpg"), class:"img-inicio", usemap: "#divconvocatoriaTA" %>
+				<%= link_to image_tag("aviso01.jpg"), class:"img-inicio", usemap: "#divconvocatoriaIN"  %>
+				<map name="#divconvocatoriaIN">
+					<area shape="rect" coords="2,0,170,140" href="/docs/3.AvisoPrivacdd_Integral_CCTV-CEIICH.pdf" target="_blank" />
+					<area shape="rect" coords="0,140,175,180" href="docs/4.AvisoPrivacdd_Simplificado_CCTV-CEIICH.pdf" target="_blank" />
+				</map>
+				<map name="#divconvocatoriaTA">
+					<area shape="rect" coords="2,0,170,140" href="docs/1.AP_Integral-Fac_Esc_Inst_CEIICH.pdf" target="_blank" />
+					<area shape="rect" coords="0,140,175,180" href="docs/2.AP_Simplificado_CEIICH.pdf" target="_blank" />
+				</map>
+		</div>
+		<div class="col-md-6">
+			<div id="fb-root"></div>
+			<div class="fb-page" id="fb-page" data-href="https://www.facebook.com/ceiich.unam.mx/" data-tabs="timeline" data-width="500" data-height="2530" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ceiich.unam.mx/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ceiich.unam.mx/">Centro de Investigaciones Interdisciplinarias en Ciencias y Humanidades</a></blockquote></div>
+
+		</div>
+	</div>

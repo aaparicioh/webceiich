@@ -1,0 +1,19 @@
+<%= render "investigador"%>
+
+
+
+<% if signed_in? and current_investigador and (current_investigador.email == @investigador.email)%>
+	<div class="contenedor">
+		<%= render 'form_lineasDeInvestigacion', investigador: @investigador %>
+		<div class="texto-informacion">
+			<%= @investigador.lineasDeInvestigacion.try(:html_safe)%>
+		</div>
+	</div>
+<%else%>
+<div class="contenedor">
+	<div class="texto-informacion">
+		<h1 align="center"  class="titulo">Lineas de Investigación</h1>
+		<%= @investigador.lineasDeInvestigacion.try(:html_safe)%>
+	</div>
+</div>
+<%end%>

@@ -1,0 +1,1 @@
+Tecnico.create(email: '', password: '123456', programa_id: '', nombres: '', apPat: '', apMat: '', nombramiento: '', categoria: '', nivel: '', definitividad: '', estimulos: '', sociedades: '', adscripcion: '', historiaAcademica: '', correo: '', telefono: '', extension:'', humanindex: '', foto: '')

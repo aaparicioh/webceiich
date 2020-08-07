@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @libro.clave %>
+</p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @libro.autor %>
+</p>
+
+<p>
+  <strong>Coordinador:</strong>
+  <%= @libro.coordinador %>
+</p>
+
+<p>
+  <strong>Coleccion:</strong>
+  <%= @libro.coleccion_id %>
+</p>
+
+<p>
+  <strong>Tematica:</strong>
+  <%= @libro.tematica_id %>
+</p>
+
+<p>
+  <strong>Edicion:</strong>
+  <%= @libro.edicion %>
+</p>
+
+<p>
+  <strong>Anio:</strong>
+  <%= @libro.anio %>
+</p>
+
+<p>
+  <strong>Paginas:</strong>
+  <%= @libro.paginas %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @libro.isbn %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @libro.contenido %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @libro.precio %>
+</p>
+
+<p>
+  <strong>Sinopsis:</strong>
+  <%= @libro.sinopsis %>
+</p>
+
+<p>
+  <strong>Descriptores:</strong>
+  <%= @libro.descriptores %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @libro.imagen %>
+</p>
+
+<p>
+  <strong>Fecha publicacion:</strong>
+  <%= @libro.fecha_publicacion %>
+</p>
+
+<%= link_to 'Edit', edit_libro_path(@libro) %> |
+<%= link_to 'Back', libros_path %>

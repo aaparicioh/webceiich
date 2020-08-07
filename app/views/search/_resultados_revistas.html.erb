@@ -1,0 +1,15 @@
+<%if !revistas.nil?%>
+
+<%else%>
+  <%if !revistas.blank?%>
+  <span class="nombrePagina"> Resultado Revistas </span><br>
+    <div class="cajarevistas">
+      <%revistas.order("created_at DESC").each do |revista|%>
+        <div class="">
+          <p align="center"><%=link_to (image_tag revista.img.url(:revista)), asset_path(revista.pdf, skip_pipeline: true), target: "_blank",styles: "revista" %></p>
+          <p align="center">  <%=revista.descripcion%></p>
+        </div>
+      <%end%>
+    </div>
+  <%end%>
+<%end%>

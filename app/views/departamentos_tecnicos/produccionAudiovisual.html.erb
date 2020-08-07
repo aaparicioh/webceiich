@@ -1,0 +1,25 @@
+
+  <%= render "multimedia"%>
+
+				<div class="cajadatosDepartamentos">
+
+          <div class="botones">
+            <%= link_to "Personal","produccionAudiovisual",class: "btnDepoActivo"%>
+            <%= link_to "Producciones","pAV_producciones",class: "btnDepoNoActivo"%>
+            <%= link_to "Repositorio","http://132.248.246.141:8080/jspui/", target:"_blank",class: "btnDepoNoActivo"%>
+            <%= link_to "Sitios de interés","pAV_sitiosinteres",class: "btnDepoNoActivo"%>
+          </div>
+
+							<div class="datosDepartamentos" id="personalAudioVisual"><br />
+									<p class="personalAcademico" align="justify"></p>
+									<p align="justify" class="tituloPersonalProyecto">Jefe del Departamento</p>
+									<p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><%= link_to "  Víctor Manuel Méndez Villanueva", "/tecnicos/informacion/16", :class => "personalAcademico" %></p>
+									<p align="justify">Tel. 5623-0206</p>
+									<p align="justify">Sala de videoconferencias<br>Tel. 5623-0225</p>
+									<p align="justify" class="tituloPersonalProyecto">Personal:</p>
+									<p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><span class="personalAcademicoSinLiga">  Wendy Ariadna Gallardo Campos </span>, broadcast y producci&oacute;n audiovisual.</p>
+									<p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><span class="personalAcademicoSinLiga">  Miguel Ángel Nava Vera </span> (administrativo)</p>
+									<p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><%= link_to "  Víctor Manuel Méndez Villanueva", "/tecnicos/informacion/27", :class => "personalAcademico" %> programaci&oacute;n y diseño web y multimedia</p>
+							</div>
+
+				</div>

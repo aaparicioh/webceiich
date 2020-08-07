@@ -1,0 +1,9 @@
+<%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+<h1>Nuevo video transmiciones</h1>
+
+<%= render 'form', video: @video %>
+
+<%= link_to 'Back', videos_path %>
+<%else%>
+<%=render "/principal/aviso_privacidad"%>
+<%end%>

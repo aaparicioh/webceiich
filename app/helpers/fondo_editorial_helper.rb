@@ -1,0 +1,2 @@
+module FondoEditorialHelper
+end

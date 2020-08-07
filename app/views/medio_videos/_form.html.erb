@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="mx-auto col-md-6 col-10">
+
+<%= form_with(model: modelo, local: true,builder: BootstrapFormBuilder) do |form| %>
+  <%= render "partials/error_form", :modelo => modelo%>
+
+  <div class="row">
+    <%= form.label :ingresar_id_del_video %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="row">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha %>
+  </div>
+
+  <div class="row">
+    <%= form.submit "Subir" %>
+  </div>
+<% end %>
+</div>
+</div>

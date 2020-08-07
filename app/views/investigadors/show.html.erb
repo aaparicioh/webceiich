@@ -1,0 +1,71 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="tituloCaja">&nbsp;&nbsp;<%= @investigador.nombres %><%= " "+@investigador.apPat %><%= " "+@investigador.apMat %>&nbsp;&nbsp;</span>
+  </div>
+  <div class="contenedor-imgdesc">
+    <div class="cajaimagenPersonalAcademico">
+      <%= image_tag "investigadores/"+@investigador.foto, class: "imagenPersonalAcademico" %>
+    </div>
+    <div class="cajaDatosBasicosPersonalAcademico clearfix">
+      
+        <span class="fichaContenido">
+          <%= @investigador.nombramiento %><%= " "+@investigador.categoria %><%= " "+@investigador.nivel %><br>
+          <%= @investigador.definitividad %><br>
+          <%= @investigador.estimulos %><br>
+          <%= @investigador.sociedades %><br>
+          <b>Adscripción</b><br>
+          <%= "Programa de Investigación en "+@investigador.adscripcion %><br>
+          <b>Historia académica</b><br>
+          <%= @investigador.historiaAcademica %><br>
+          <b>Contacto</b><br>
+          <%= @investigador.email %><br>
+          <%= "Tel. "+@investigador.telefono+" "%><%= "Ext. "+@investigador.extension if @investigador.extension != "" %><br><br>
+          <%= link_to image_tag("humanindex.png", width: 125), @investigador.humanindex, target: :_blank %>
+        </span>
+      
+    </div>
+  </div>
+
+
+
+    <div class="cajaContenidosPersonalAcademico clearfix">
+          <% if signed_in? and current_investigador %>
+            <div align="center">Sesión iniciada mediante <b><%= current_investigador.email %>
+              </br><br/>
+            </div>
+          <%end%>
+          <div class="barraInformacion" align="center">
+            <span class="btnWebPersonal">
+              <% id=@investigador.id.to_s %>
+              <% ruta="/investigadors/curriculo/"+id%>
+              <%= link_to "Currículo", ruta, id: "btnInformacion"%>
+            </span>
+            <span class="btnWebPersonal">
+              <% id=@investigador.id.to_s %>
+              <% ruta="/investigadors/lineasDeInvestigacion/"+id %>
+              <%= link_to "Líneas de Investigación",ruta, id: "btnInformacion"%>
+            </span>
+            <span class="btnWebPersonal">
+              <% id=@investigador.id.to_s %>
+              <% ruta="/investigadors/publicaciones/"+id %>
+              <%= link_to "Publicaciones",ruta, id: "btnInformacion" %>
+            </span>
+            <span class="btnWebPersonal">
+              <% id=@investigador.id.to_s %>
+              <% ruta="/investigadors/docencia/"+id %>
+              <%= link_to "Docencia",ruta, id: "btnInformacion" %>
+            </span>
+            <span class="btnWebPersonal">
+              <% id=@investigador.id.to_s %>
+              <% ruta="/investigadors/asociacionesCientificas/"+id %>
+              <%= link_to "Asociaciones Científicas",ruta, id: "btnInformacion" %>
+            </span>
+            <span class="btnWebPersonal">
+              <% id=@investigador.id.to_s %>
+              <% ruta="/investigadors/ligasDeInteres/"+id %>
+              <%= link_to "Ligas de Interés",ruta, id: "btnInformacion" %>
+            </span>
+          </div>
+        </b>
+      </div>
+    </div>

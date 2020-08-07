@@ -1,0 +1,254 @@
+
+    <div class="cajaDelTituloDeLaPagina">
+      <span class="nombrePagina">Dirección</span>
+    </div>
+    <div class="cajaParaElContenido">
+      <br/>
+      <table width="68%" align="center">
+        <% @investigadores.each do |inv| %>
+          <% if inv.cargo == "Director" || inv.cargo == "Directora" %>
+            <tr>
+              <td align="center" valign="middle"><%= image_tag "investigadores/"+inv.foto, class: "img-direccion"%></td>
+              <td height="42" align="center" valign="middle">
+                <div align="right">
+                  <p><span class="titulosAcercaDelCeiich"><%= inv.cargo %></span><br></p>
+
+                  <% id=inv.id.to_s %>
+                  <% ruta="/investigadors/informacion/"+id %>
+                  <p><%= link_to inv.nombres+" "+inv.apPat+" "+inv.apMat, ruta, class: "personalAcademico" %><br>
+                  <span class="datos-contacto">
+                    <%= "Tel. " + inv.telefono %><br>
+                  </span>
+                  </p>
+                </div>
+              </td>
+
+              <td height="42" align="center" valign="middle" >
+                <%= mail_to inv.email do %>
+                  <%= image_tag "contacto.png" %>
+                <%end%>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+        <tr valign="top">
+          <% @confianzas.each do |conf| %>
+            <% if conf.area == 'Dirección' %>
+              <td align="center" valign="middle" ><%= image_tag "confianza/"+conf.foto, class: "img-direccion"%></td>
+              <td height="78" align="center" valign="top" >
+                <div align="right">
+                <p>
+                  <span class="titulosAcercaDelCeiich">
+                  <%= conf.funcion %>
+                  </span><br>
+
+                  <span class="personalAcademicoSinLiga">
+                    <%= conf.nombres + " " + conf.apPat + " " + conf.apMat%>
+                  </span><br>
+                  <span class="datos-contacto"  >
+                    <%= "Tel. " + conf.telefono1 %> <%= "Ext. " + conf.extension1 if conf.extension1 != ""%>
+                    <% if conf.telefono2 != "" %>
+                    <%= conf.telefono2 %> <%= "Ext. " + conf.extension2 if conf.extension2 != ""%>
+                    <% end %>
+                  </span><br>
+                  <% if conf.fax != "" %>
+                    <span class="datos-contacto"  >
+                      <%= "Fax. " + conf.fax %>
+                    </span><br>
+                  <% end %>
+                  <span class="datos-contacto"  >
+                  Correo electrónico:<br/>
+                    <%= conf.email %>
+                  <br>
+                </p>
+                </div>
+              </td>
+            <% end %>
+          <% end %>
+          <td height="78" align="center" >&nbsp;</td>
+          <td height="78" align="center" class="Titulos"></td>
+        </tr>
+        <tr>
+          <td height="22" colspan="4" align="center" valign="middle" ><hr width="90%" /></td>
+        </tr>
+        <% @investigadores.each do |inv| %>
+          <% if inv.cargo == "Secretario Académico" || inv.cargo == "Secretaria Académica" %>
+            <tr>
+              <td align="center" valign="middle" ><%= image_tag "investigadores/"+inv.foto, class: "img-direccion" %></td>
+              <td height="42" align="center" valign="middle" >
+                <div align="right">
+                  <p>
+                    <span class="titulosAcercaDelCeiich"><%= inv.cargo %></span><br>
+                    <% id=inv.id.to_s %>
+                    <% ruta="/investigadors/informacion/"+id %>
+                    <span><%= link_to inv.nombres+" "+inv.apPat+" "+inv.apMat, ruta, class: "personalAcademico" %></span><br>
+                    <span><%= "Tel. " + inv.telefono %></span><br>
+                  </p>
+                </div>
+              </td>
+              <td height="42" align="center" valign="middle" >
+                <%= mail_to inv.email do %>
+                  <%= image_tag "contacto.png" %>
+                <%end%>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+        <tr>
+          <% @confianzas.each do |conf| %>
+            <% if conf.area == 'Secretaría Académica' %>
+              <td align="center" valign="middle" ><%= image_tag "confianza/"+conf.foto, class: "img-direccion" %></td>
+              <td height="78" align="center" valign="top" >
+                <div align="right">
+                  <p>
+                  <span class="titulosAcercaDelCeiich">
+                    <%= conf.funcion %>
+                  </span><br>
+                  <span class="personalAcademicoSinLiga">
+                    <%= conf.nombres + " " + conf.apPat + " " + conf.apMat%>
+                  </span><br>
+                  <span >
+                    <%= "Tel. " + conf.telefono1 %> <%= "Ext. " + conf.extension1 if conf.extension1 != ""%>
+                    <% if conf.telefono2 != "" %>
+                        <br/><%= "Tel. " + conf.telefono2 %> <%= "Ext. " + conf.extension2 if conf.extension2 != ""%>
+                    <% end %>
+                  </span><br>
+                  <% if conf.fax != "" %>
+                    <span >
+                      <%= "Fax. " + conf.fax %>
+                    </span><br>
+                  <% end %>
+                  Correo electrónico:<br/>
+                  <span >
+                    <%= conf.email %>
+                  </span><br>
+                  </p>
+                </div>
+              </td>
+            <% end %>
+          <% end %>
+        </tr>
+
+        <tr>
+          <td height="23" colspan="4" align="center" valign="middle" ><hr width="90%" /></td>
+        </tr>
+        <% @confianzas.each do |conf| %>
+          <% if conf.area == "Secretaría Técnica" && conf.funcion == "Titular" %>
+            <tr>
+              <td align="center" valign="middle" ><%= image_tag "confianza/"+conf.foto, class: "img-direccion" %></td>
+              <td height="42" align="center" valign="middle" >
+                <div align="right">
+                  <p>
+                    <span class="titulosAcercaDelCeiich"><%= conf.cargo %></span><br>
+                    <span class="personalAcademicoSinLiga"><%= conf.nombres + " " +conf.apPat + " " +conf.apMat %></span><br>
+                    <%= "Tel. " + conf.telefono1 %><br>
+                  </p>
+                </div>
+              </td>
+              <td height="42" align="center" valign="middle" >
+                <%= mail_to conf.email do %>
+                  <%= image_tag "contacto.png" %>
+                <%end%>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+
+        <tr>
+          <% @confianzas.each do |conf| %>
+            <% if conf.area == 'Secretaría Técnica' && conf.funcion != "Titular" %>
+              <td align="center" valign="middle" ><%= image_tag "confianza/"+conf.foto, class: "img-direccion" %></td>
+              <td height="78" align="center" valign="top" >
+                <div align="right">
+                  <p>
+                  <span class="titulosAcercaDelCeiich">
+                  <%= conf.funcion %>
+                  </span><br>
+                  <span class="personalAcademicoSinLiga">
+                    <%= conf.nombres + " " + conf.apPat + " " + conf.apMat%>
+                  </span><br>
+                  <span >
+                    <%= "Tel. " + conf.telefono1 %> <%= "Ext. " + conf.extension1 if conf.extension1 != ""%>
+                    <% if conf.telefono2 != "" %>
+                        <br/><%= "Tel. " + conf.telefono2 %> <%= "Ext. " + conf.extension2 if conf.extension2 != ""%>
+                    <% end %>
+                  </span><br>
+                  <% if conf.fax != "" %>
+                    <span >
+                      <%= "Fax. " + conf.fax %>
+                    </span><br>
+                  <% end %>
+                  Correo electrónico:<br/>
+                  <span >
+                    <%= conf.email %>
+                  </span><br>
+                  </p>
+                </div>
+              </td>
+            <% end %>
+          <% end %>
+        </tr>
+
+        <tr>
+          <td height="23" colspan="4" align="center" valign="middle" ><hr width="90%" /></td>
+        </tr>
+        <% @confianzas.each do |conf| %>
+          <% if conf.area == "Secretaría Administrativa" && conf.funcion == "Titular" %>
+            <tr>
+              <td align="center" valign="middle" ><%= image_tag "confianza/"+conf.foto, class: "img-direccion" %></td>
+              <td height="42" align="center" valign="middle" >
+                <div align="right">
+                  <p>
+                    <span class="titulosAcercaDelCeiich"><%= conf.cargo %></span><br>
+                    <span class="personalAcademicoSinLiga"><%= conf.nombres + " " +conf.apPat + " " +conf.apMat %></span><br>
+                    <span><%= "Tel. " + conf.telefono1 %></span><br>
+                  </p>
+                </div>
+              </td>
+
+              <td height="42" align="center" valign="middle" >
+                <%= mail_to conf.email do %>
+                  <%= image_tag "contacto.png" %>
+                <%end%>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+        <% @confianzas.each do |conf| %>
+          <% if conf.area == "Secretaría Administrativa" && conf.funcion != "Titular" %>
+            <tr>
+              <td align="center" valign="middle" ><%= image_tag "confianza/"+conf.foto, class: "img-direccion"%></td>
+              <td height="78" align="center" valign="top" >
+                <div align="right">
+                  <p>
+                  <span class="titulosAcercaDelCeiich">
+                    <%= conf.funcion %>
+                  </span><br>
+                  <span class="personalAcademicoSinLiga">
+                    <%= conf.nombres + " " + conf.apPat + " " + conf.apMat%>
+                  </span><br>
+                  <span >
+                    <%= "Tel. " + conf.telefono1 %> <%= "Ext. " + conf.extension1 if conf.extension1 != ""%>
+                    <% if conf.telefono2 != "" %>
+                        <br/><%= "Tel. " + conf.telefono2 %> <%= "Ext. " + conf.extension2 if conf.extension2 != ""%>
+                    <% end %>
+                  </span><br>
+                  <% if conf.fax != "" %>
+                    <span >
+                      <%= "Fax. " + conf.fax %>
+                    </span><br>
+                  <% end %>
+                  Correo electrónico:<br/>
+                  <span >
+                    <%= conf.email %>
+                  </span><br>
+                  </p>
+                </div></td>
+            </tr>
+          <% end %>
+        <% end %>
+        <tr>
+          <td colspan="4" align="center" valign="top" class="titulosAcercaDelCeiich"></td>
+        </tr>
+      </table><br/>
+    </div>

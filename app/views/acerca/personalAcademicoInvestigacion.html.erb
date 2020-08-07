@@ -1,0 +1,41 @@
+<div class="contenedor">
+	<div class="divTitulo">
+		<span class="titulo">
+			Personal Académico
+		</span>
+	</div>
+	<br>
+	<div class="row">
+		<%= link_to "De Investigación", acerca_personalAcademicoInvestigacion_path, class:"btn btnActivo" %>
+		<%= link_to "Técnico Académico", acerca_personalAcademicoTecnico_path, class:"btn btnNoActivo"  %>
+	</div>
+	<br>
+
+	<div align="center">
+		<%@investigadores.each do |inv|%>
+			<% if inv.id%2 == 1 %>
+				<br/><div class="row">
+			<% end %>
+				<div class="col-md-2">
+					<%if inv.foto != nil && !inv.foto.blank?%>
+						<%= image_tag "investigadores/"+inv.foto, class: "imagen"%>
+					<%end%>
+				</div>
+				<div class="col-md-2 d-flex align-items-center">
+					<% id=inv.id.to_s %>
+					<% ruta="/investigadors/informacion/"+id  %>
+					<%if ruta != nil && inv.apMat != nil && inv.apPat != nil %>
+						<%= link_to inv.apPat+" "+inv.apMat+" "+inv.nombres, ruta, class: "link " %>
+					<%end%>
+				</div>
+				<div class="col-md-1 d-flex align-items-center">
+					<%= mail_to inv.email do %>
+						<%= image_tag "contacto.png", border: 0, class: "img-mail" %>
+					<%end%>
+				</div>
+			<% if inv.id%2 == 0 %>
+				</div>
+			<% end %>
+		<%end%>
+	</div>
+</div>

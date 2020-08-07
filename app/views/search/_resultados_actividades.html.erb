@@ -1,0 +1,19 @@
+  <%if !eventos.blank?%>
+
+  <%contmodal=1%>
+  <span class="nombrePagina"> Resultado Actividades </span><br>
+
+  <%eventos.each do |event| %>
+
+
+      <%if event.id != 1%>
+        <div class="cajaEvent">
+          <%@ActividadModal="ActividadModal"+contmodal.to_s%>
+          <%= image_tag "#{event.img}", class: "foto-mini", data: { target: "##{@ActividadModal}", toggle: "modal"}%>
+          <%= render "/actividades_academicas/modal", event: event%>
+        </div>
+      <%end%>
+
+  <%end%>
+
+<%end%>

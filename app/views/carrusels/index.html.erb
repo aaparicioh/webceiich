@@ -1,0 +1,31 @@
+<%if current_admin.try(:is_admin?) or current_admin%>
+<p id="notice"><%= notice %></p>
+
+<h1>Carrusels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carrusels.each do |carrusel| %>
+      <tr>
+        <td><%= image_tag carrusel.img.url,class: "foto-mini" %></td>
+        <td><%= carrusel.url %></td>
+        <td><%= link_to 'Show', carrusel %></td>
+        <td><%= link_to 'Edit', edit_carrusel_path(carrusel) %></td>
+        <td><%= link_to 'Destroy', carrusel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%=link_to "Regresar al panel de administracion",principal_administradores_path, class: "link"%> <br>
+<%= link_to 'Agregar Imagen al Carrusel', new_carrusel_path, class: "link" %>
+<%end%>

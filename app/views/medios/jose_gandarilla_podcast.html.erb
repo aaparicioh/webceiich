@@ -1,0 +1,18 @@
+
+  <div class="cajaDelTituloDeLaPagina">
+  	<span class="nombrePagina">Voces del CEIICH</span> &nbsp;&nbsp;&nbsp;
+  </div>
+
+  <div class=podcast-individual>
+    <table>
+      <tr>
+          <td class= "podcast-ind">
+            <%= image_tag("podcast/voces/jose_gandarilla.jpg",class: "pod-img-ind")%>
+          </td>
+          <td class= "podcast-ind">
+            <%= audio_tag("jose_gandarilla.mp3",controls: true, class: "audio" )%>
+          </td>
+      </tr>
+    </table>
+    <%=link_to fa_icon('forward',class: 'fas fa-undo-alt fa-3x icon-back'), 'javascript:history.back()'%>
+  </div>

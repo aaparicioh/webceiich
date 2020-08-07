@@ -1,0 +1,8 @@
+<%=año%>
+<%=tipo%>
+<div class="cajaPresenciaMedios">
+    <%archivos.order(clave: :desc).each do |archivo|%>
+
+    <%end%>
+<%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>
+</div>

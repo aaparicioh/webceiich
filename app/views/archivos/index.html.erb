@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Archivos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Fecha</th>
+      <th>Fuente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archivos.each do |archivo| %>
+      <tr>
+        <td><%= archivo.titulo %></td>
+        <td><%= archivo.fecha %></td>
+        <td><%= archivo.fuente %></td>
+        <td><%= link_to 'Show', archivo %></td>
+        <td><%= link_to 'Edit', edit_archivo_path(archivo) %></td>
+        <td><%= link_to 'Destroy', archivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Archivo', new_archivo_path %>

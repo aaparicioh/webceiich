@@ -1,0 +1,28 @@
+<div class="contenedor">
+  <p id="notice"><%= notice %></p>
+  <div class="divTitulo">
+    <span class="titulo">
+      Programas
+    </span>
+  </div>
+  <br>
+  <div class="row">
+    <% @programas.each do |programa| %>
+
+      <div class="col-md-3">
+        <%= programa.nombre %>
+      </div>
+      <div class="col-md-3">
+        <%= programa.foto %>
+      </div>
+      <div class="col-md-3">
+        <%= programa.descripcion %>
+      </div>
+      <div class="col-md-3">
+        <%= link_to 'Editar', edit_programa_path(programa),class:"link" %>
+        <%= link_to 'Destruir', programa, method: :delete, data: { confirm: 'Are you sure?' },class:"link" %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to 'New Programa', new_programa_path, class:"btn btnActivo" %>
+</div>

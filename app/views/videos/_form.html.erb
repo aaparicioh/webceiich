@@ -1,0 +1,50 @@
+<%= form_with(model: video, local: true) do |form| %>
+  <% if video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<div class="row">
+  <div class="mx-auto col-md-6 col-10">
+    <%= form_with(model: modelo, local: true,builder: BootstrapFormBuilder) do |form| %>
+    <%= render "partials/error_form", :modelo => modelo%>
+
+      <div class="row">
+        <%= form.label :titulo %>
+        <%= form.text_field :titulo %>
+      </div>
+
+      <div class="row">
+        <%= form.label :fecha %>
+        <%= form.date_select :fecha %>
+      </div>
+
+      <div class="row">
+        <%= form.label :fuente %>
+        <%= form.cktext_area :fuente %>
+      </div>
+
+      <div class="row">
+        <%= form.label :tipo %>
+        <%= form.select :tipo_id,options_from_collection_for_select(TipoArchivo.all, :id, :tipo) %>
+      </div>
+
+      <div class="row">
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>

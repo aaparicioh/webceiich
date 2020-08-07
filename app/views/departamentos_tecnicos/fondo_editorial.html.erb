@@ -1,0 +1,20 @@
+<link href="20000000.css" rel="stylesheet" type="text/css" title="normal"/>
+<link href="publicaciones.css" rel="stylesheet" type="text/css" title="normal"/>
+
+<div class="contenedor">
+  <%= render "publicaciones"%>
+  <div class="cajadatosDepartamentos">
+    <div class="botones">
+      <%= link_to "Personal","publicaciones",class: "btnDepoNoActivo"%>
+      <%= link_to "Fondo Editorial","fondo_editorial",class: "btnDepoActivo"%>
+      <%= link_to "Venta y Distribución","ventasydistribuciones",class: "btnDepoNoActivo"%>
+    </div>
+  </div>
+      <div class="publicaciones">
+        <span><%=fa_icon('book',class: 'fas fa-book icon-publicacion')%><%=link_to "  Libros","/fondo_editorial/libros_tematica",class: "link"%></span><br>
+        <span><%=fa_icon('film',class: 'fas fa-film icon-publicacion')%><%=link_to "  Videos","/fondo_editorial/video",class: "link"%></span><br>
+        <span><%=fa_icon('book-open',class: 'fas fa-book-open icon-publicacion')%><%=link_to "  Revistas","/fondo_editorial/revistas",class: "link"%></span><br>
+
+      </div>
+
+</div>

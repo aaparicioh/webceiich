@@ -1,0 +1,37 @@
+<%= render "presencia_medios"%>
+
+
+ <div class="cajaPresenciaMedios">
+   <table class="items-presencia-medios">
+     <tr>
+       <td>
+         <p class="titulos-pm">
+           <b> Presencia en Medios de los Encuentros Académicos del CEIICH Reseñas de libros, 2010</b></p>
+       </td>
+     </tr>
+     <tr>
+       <td  class="item-pm">
+         <div class="div-pm">
+           <%=fa_icon('paperclip',class: 'fas fa-paperclip fa-2x ')%>
+             <%=link_to "Libro Investigadoras de la UNAM: trabajo académico, productividad y calidad de vida","http://computo.ceiich.unam.mx/webceiich/deptoDifusion/32PreMed/13-10-R1.pdf",class: "titulo-presencia_medios"%>
+         </div>
+         <p>Realización del evento: 1 de octubre</p>
+         <p>Fuente: Hernández Romero, Erika "Martha Patricia Castañeda Salgado, Teresa Ordorika Sacristán (coordinadoras). Investigadoras de la UNAM: trabajo académico, productividad y calidad de vida", Departamento de Difusión CEIICH/UNAM, octubre de 2013.</p>
+       </td>
+     </tr>
+		 <tr>
+       <td  class="item-pm">
+         <div class="div-pm">
+           <%=fa_icon('paperclip',class: 'fas fa-paperclip fa-2x ')%>
+             <%=link_to "Libro. Intervenciones sobre miedos y otros","http://computo.ceiich.unam.mx/webceiich/deptoDifusion/32PreMed/13-12-R2.pdf",class: "titulo-presencia_medios"%>
+         </div>
+         <p></p>
+         <p>Fuente: Hernández Romero, Erika "Maya Aguiluz Ibargüen (coordinadora) Intervenciones sobre miedos y otros", Departamento de Difusión CEIICH/UNAM, diciembre de 2013.</p>
+       </td>
+     </tr>
+
+
+
+   </table>
+ <%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>
+ </div>

@@ -1,0 +1,78 @@
+
+
+    <%= render "descripcion_depto"%>
+    <div class="contenedor">
+      <div class="div-archivos">
+        <p class="titulos-pm ">
+          <b> Presencia en Medios de los Encuentros Académicos del CEIICH Boletines CEIICH , 2009</b>
+        </p>
+      </div>
+        <%= render "departamentos_tecnicos/archivos", :tipo => "Boletín" ,:anio => "2009"%>
+
+    </div>
+
+
+
+
+
+      <div class="cajaPresenciaMedios">
+        <table class="items-presencia-medios">
+          <tr>
+            <td>
+              <p class="titulos-pm">
+                <b> Presencia en Medios de los Encuentros Académicos del CEIICH Boletines CEIICH , 2009</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="div-pm">
+                <%=fa_icon('paperclip',class: 'fas fa-paperclip fa-2x ')%>
+                <%= link_to "Presentación del Libro: La divulgación de la Ciencia a través de formas narrativas","http://computo.ceiich.unam.mx/webceiich/deptoDifusion/32PreMed/09-08-B1.pdf",class: "link-pm"%>
+              </div>
+                <p>Realización del evento: 26 de agosto</p>
+                <p>Fuente: Campos Arzeta, Mireille. “La divulgación de la ciencia a través de formas narrativas”, Departamento de Difusión CEIICH/ UNAM, agosto de 2009.</p>
+            </td>
+          </tr>
+          <tr>
+            <td  class="item-pm">
+              <div class="div-pm">
+                <%=fa_icon('paperclip',class: 'fas fa-paperclip fa-2x ')%>
+                <%= link_to "Cátedra Florestan Fernandes (CLACSO)","http://computo.ceiich.unam.mx/webceiich/deptoDifusion/32PreMed/09-09-B2.pdf",class: "link-pm"%>
+              </div>
+                <p>Realización del evento: 3 de agosto a 27 de noviembre</p>
+                <p>Fuente: Villa Soto, Juan Carlos. “Académicos del CEIICH-UNAM Imparten La Cátedra Florestan Fernandes De CLACSO en el marco de su noveno concurso”, Departamento de Difusión CEIICH/ UNAM, septiembre de 2009.</p>
+            </td>
+          </tr>
+          <tr>
+            <td  class="item-pm">
+              <div class="div-pm">
+                <%=fa_icon('paperclip',class: 'fas fa-paperclip fa-2x ')%>
+                <%= link_to "Presentación del libro: Entre amoras. Lesbianismo en la narrativa mexicana","http://computo.ceiich.unam.mx/webceiich/deptoDifusion/32PreMed/09-10-B3.pdf",class: "link-pm"%>
+              </div>
+                <p>Realización del evento: 1 de octubre</p>
+                <p>Fuente: Hernández Romero, Erika. “El CEIICH presentó el libro Entre amoras. Lesbianismo en la narrativa mexicana” , Departamento de Difusión CEIICH/ UNAM, octubre de 2009.</p>
+            </td>
+          </tr>
+          <tr>
+            <td  class="item-pm">
+              <div class="div-pm">
+                <%=fa_icon('paperclip',class: 'fas fa-paperclip fa-2x ')%><a href="http://computo.ceiich.unam.mx/webceiich/deptoDifusion/32PreMed/09-10-B4.pdf"><b>   Presentación del Libro: Innovación y empresa: Estudios históricos de México, España y América Latina</b></a>
+              </div>
+                <p>Realización del evento: 17 de noviembre</p>
+                <p>Fuente: Campos Arzeta, Mireille. “Innovación y Empresa: experiencias de innovación en México, España y Latinoamérica”, Departamento de Difusión CEIICH/ UNAM, octubre de 2009.</p>
+            </td>
+          </tr>
+          <tr>
+            <td  class="item-pm">
+              <div class="div-pm">
+                <%=fa_icon('paperclip',class: 'fas fa-paperclip fa-2x ')%><a href="http://computo.ceiich.unam.mx/webceiich/deptoDifusion/32PreMed/09-12-B5.pdf"><b>   Conferencia: Principios metodológicos de la investigación - acción</b></a>
+              </div>
+                <p>Realización del evento: 2 de diciembre</p>
+                <p>Fuente: Hernández Romero, Erika. “Conferencia Principios metodológicos de la investigación-acción de Cecilia Krohling Peruzzo, Universidad Metodista de Sao Paulo, Brasil”, Departamento de Difusión CEIICH/ UNAM, diciembre de 2009.</p>
+            </td>
+          </tr>
+
+        </table>
+
+      <%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>
+      </div>

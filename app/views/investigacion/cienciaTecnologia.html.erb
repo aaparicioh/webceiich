@@ -1,0 +1,56 @@
+<%= render 'comuninvestigacion' %>
+<div class="contenedor">
+  <br>
+  <div class="divTitulo">
+      <span class="subtitulo">Personal y proyectos de investigación</span>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+
+      <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Lev  Orlando Jardón Barbolla", "/investigadors/informacion/25", class: "personal link" %></a><span class="cargo"> / coordinador</span> <br />
+        <span class="proyectosDeInvestigacion">Domesticación y diversificación de plantas de Mesoamérica: evolución y valor de uso. </span>
+      </p>
+      <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Norma Blazquez Graf", "/investigadors/informacion/5", class: "personal link" %><br>
+        <span class="proyectosDeInvestigacion"> Aportaciones de la teoría feminista a la ciencia</span>.<br />
+        <span class="proyectosDeInvestigacion"> Historia de la incorporación de las mujeres a la educación superior y a la investigación científica y tecnológica</span>.<br />
+        <span class="proyectosDeInvestigacion"> Participación actual y las trayectorias de las mujeres en la carrera académica</span>.<br />
+        <span class="proyectosDeInvestigacion"> Tecnologías reproductivas desde un análisis de género</span>.
+      </p>
+      <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Guillermo Agustín Guajardo Soto", "/investigadors/informacion/22", class: "personal link" %><br>
+        <span class="proyectosDeInvestigacion"> Tecnologías, organizaciones e infraestructuras  para la innovación y la movilidad: un enfoque histórico interdisciplinario.</span>
+      </p>
+      <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Aquiles Negrete Yankelevich", "/investigadors/informacion/41", class: "personal link" %><br>
+        <span class="proyectosDeInvestigacion">La divulgación científica a través de medios culturales.</span>
+      </p>
+      <p><br />
+      </p>
+    </div>
+    <div class="col-md-4">
+      <p><%= image_tag("iconAcademicoM.png") %><%= link_to "  Ramos Lara María de la Paz", "/investigadors/informacion/45", class: "personal link" %><br>
+        <span class="proyectosDeInvestigacion"> Historia de la ciencia y la tecnología en México.<br />
+        El desarrollo de las ciencias físicas en México (1810-2010). Festejos del Bicentenario de la Independencia y del Centenario de la Revolución Mexicana.</span>
+      </p>
+      <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Ricardo Lino Mansilla Corona", "/investigadors/informacion/36", class: "personal link" %><br>
+        <span class="cargo">(cargo de Secretario Académico)</span><br />
+        <span class="proyectosDeInvestigacion"> La f&iacute;sica estad&iacute;stica de los mercados  financieros.</span><br />
+        <span class="proyectosDeInvestigacion"> Redes y mundos peque&ntilde;os en ciencias sociales.</span>
+      </p>
+      <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Muñoz Rubio Julio", "/investigadors/informacion/40", class: "personal link" %><br>
+        <span class="proyectosDeInvestigacion"> Algunas contribuciones desde la dial&eacute;ctica al  estudio de la teor&iacute;a de la evoluci&oacute;n. (Proyecto  PAPIIT)</span>
+      </p>
+      <p class="subtitulo">Personal técnico académico:</p><br>
+        <%= link_to "  Labrador Sánchez Alejandro", "/tecnicos/informacion/13", class: "personal link" %><br>
+        <%= link_to "  López Torres Rogelio", "/tecnicos/informacion/14", class: "personal link" %><br>
+        <%= link_to "  Mendoza Rosas Rosa María", "/tecnicos/informacion/18", class: "personal link" %><br>
+        <%= link_to "  Moncada Marín Alma Laura", "/tecnicos/informacion/20", class: "personal link" %><br>
+        <%= link_to "  Villa Soto Juan Carlos", "/tecnicos/informacion/28", class: "personal link" %><br>
+    </div>
+    <div class="col-md-4">
+      <%=render 'publicaciones' , publicacion: @publicacion , programa: @programa.id %>
+    </div>
+  </div>
+<div class="row">
+  <%=render '/publicaciones/form' , publicacion: @publicacion , programa: @programa.nombre %>
+</div>
+</div>

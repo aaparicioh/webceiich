@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Novedadesbibliograficas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mes</th>
+      <th>Anio</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @novedadesbibliograficas.each do |novedadbibliografica| %>
+      <tr>
+        <td><%= novedadbibliografica.mes %></td>
+        <td><%= novedadbibliografica.anio %></td>
+        <td><%= novedadbibliografica.nombre_pdf %></td>
+        <td><%= link_to 'Show', novedadbibliografica %></td>
+        <td><%= link_to 'Edit', edit_novedadbibliografica_path(novedadbibliografica) %></td>
+        <td><%= link_to 'Destroy', novedadbibliografica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Novedadbibliografica', new_novedadbibliografica_path %>

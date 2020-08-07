@@ -1,0 +1,19 @@
+<div class="contenedor">
+
+	<%=render "/docencia/acercaDe_descripcion"%>
+	<br>
+			<%= link_to "Personal","acercaDe",class: "btn btnActivo"%>
+			<%= link_to "Líneas de trabajo","lineasTrabajo",class: "btn btnNoActivo"%>
+	<br>
+		<div class="divTexto">
+			<p class="personalAcademico" align="justify"></p>
+			<p align="justify" class="tituloPersonalProyecto">Jefa del Departamento</p>
+			<p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Erika Liliana López López", root_path, :class => "personalAcademico" %></p>
+			<p align="justify">Tel. 56 23 02 22 ext. 42760 <br>docenciaceiich@unam.mx</p>
+			<p align="justify" class="tituloPersonalProyecto">Personal:</p>
+			<p align="justify"><%= image_tag("iconAcademicoM.png") %><span class="personalAcademico"> Laura Alanís Pacheco</span></p>
+			<p align="justify"> Tel. 56230222 ext. 42768</p>
+			<p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Ana Elisa Villarreal Barrón", "/tecnicos/informacion/29", :class => "personalAcademico" %></p>
+			<p align="justify"> Tel. 56230222 ext. 42784</p>
+		</div>
+</div>

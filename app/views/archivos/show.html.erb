@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @archivo.titulo %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @archivo.fecha %>
+</p>
+
+<p>
+  <strong>Fuente:</strong>
+  <%= @archivo.fuente %>
+</p>
+
+<%= link_to 'Edit', edit_archivo_path(@archivo) %> |
+<%= link_to 'Back', archivos_path %>

@@ -1,0 +1,57 @@
+
+
+<%= render "descripcion_depto"%>
+
+<div class="contenedor">
+  <br>
+  <%= link_to "Personal","computo",class: "btn btnActivo"%>
+  <%= link_to "Sitios de interés","computo_sitiosinteres",class: "btn btnNoActivo"%>
+
+  <div class="divTitulo">
+    <span class="subtitulo">
+      Jefe del Departamento
+    </span>
+  </div>
+
+  <%= image_tag("iconAcademicoH.png") %><span class="personalAcademico"><b> Jorge Pantaleón Martínez</b></span>
+
+  <p align="justify" class="tituloPersonalProyecto"></p>
+  <p align="justify"><%= image_tag("iconAcademicoH.png") %><span class="personalAcademico"><b> Jorge Pantaleón Martínez</b></span></p>
+  <p align="justify">Tel. 5623-0204 </p>
+  <p align="justify">jorge.pm@ceiich.unam.mx</p>
+  <p align="justify" class="tituloPersonalProyecto">Personal:</p>
+  <p align="justify"><%= image_tag("iconAcademicoH.png") %><span class="personalAcademico"> Axel Aparicio Hernández</span></p>
+  <p align="justify">axel.ah@ceiich.unam.mx</p>
+  <p align="justify"><%= image_tag("iconAcademicoM.png") %><span class="personalAcademico"> Diana Paulina Gallegos Vera</span></p>
+  <p align="justify">paulina.gv@ceiich.unam.mx</p>
+  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Brisa Jessica Luna Sabás", "/tecnicos/informacion/15", :class => "personalAcademico" %></p>
+  <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Liliana Josefina Muñiz Zafra", "/tecnicos/informacion/21", :class => "personalAcademico" %></p>
+
+
+</div>
+<br>
+<div class="cajadatosDepartamentos clearfix">
+  <div class="cajadatosDepartamentos">
+    <div class="botones">
+      <%= link_to "Personal","computo",class: "btn btnActivo"%>
+      <%= link_to "Sitios de interés","computo_sitiosinteres",class: "btn btnNoActivo"%>
+    </div>
+
+
+    <div class="datosDepartamentos">
+      <p class="personalAcademico" align="justify"></p>
+      <p align="justify" class="tituloPersonalProyecto">Jefe del Departamento</p>
+      <p align="justify"><%= image_tag("iconAcademicoH.png") %><span class="personalAcademico"><b> Jorge Pantaleón Martínez</b></span></p>
+      <p align="justify">Tel. 5623-0204 </p>
+      <p align="justify">jorge.pm@ceiich.unam.mx</p>
+      <p align="justify" class="tituloPersonalProyecto">Personal:</p>
+      <p align="justify"><%= image_tag("iconAcademicoH.png") %><span class="personalAcademico"> Axel Aparicio Hernández</span></p>
+      <p align="justify">axel.ah@ceiich.unam.mx</p>
+      <p align="justify"><%= image_tag("iconAcademicoM.png") %><span class="personalAcademico"> Diana Paulina Gallegos Vera</span></p>
+      <p align="justify">paulina.gv@ceiich.unam.mx</p>
+      <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Brisa Jessica Luna Sabás", "/tecnicos/informacion/15", :class => "personalAcademico" %></p>
+      <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  Liliana Josefina Muñiz Zafra", "/tecnicos/informacion/21", :class => "personalAcademico" %></p>
+    </div>
+
+  </div>
+</div>

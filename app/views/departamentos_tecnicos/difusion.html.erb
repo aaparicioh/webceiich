@@ -1,0 +1,20 @@
+<%= render "descripcion_depto"%>
+
+
+<br>
+      <%= link_to "Personal","difusion",class: "btn btnActivo"%>
+      <%= link_to "Encuentros Académicos","/actividades_academicas/anteriores",class: "btn btnNoActivo"%>
+      <%= link_to "Presencencia en medios","presencia_medios",class: "btn btnNoActivo"%>
+      <%= link_to "Archivo Fotográfico","/actividades_academicas/archivoFotografico",class: "btn btnNoActivo"%>
+
+  <div class="datosDepartamentos" id="datosdifusion">
+    <p class="personalAcademico" align="justify"></p>
+    <p align="justify" class="tituloPersonalProyecto">Jefa del Departamento</p>
+    <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><%= link_to "  María Gladys Castillo Guerrero", "/tecnicos/informacion/5", :class => "personalAcademico" %>
+    </p>
+    <p align="justify">Tel. 5623-0027</p>
+    <p align="justify" class="tituloPersonalProyecto">Personal:</p>
+    <p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %> Patricia Marisol Renter&iacute;a Ju&aacute;rez</p>
+    <p align="right"><b>(asistente t&eacute;cnico)</b></p>
+  </div>
+</div>

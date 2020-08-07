@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Ceiich</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link href="/assets/estilosGeneral.css" rel="stylesheet" type="text/css" title="normal"/>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v5.0"></script>
+  <script src="https://cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.js"> </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/locale/es.js'></script>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="contenedor">
+
+    <%=render "/partials/navbar"%>
+    <%=render "/partials/alerts"%>
+    <%if current_tecnico%>
+    <p>MIAW MIAW</p>
+    <%end%>
+  </div>
+  <%= yield %>
+  <div class="contenedor">
+    <%=render "/partials/pie"%>
+  </div>
+</body>
+</html>

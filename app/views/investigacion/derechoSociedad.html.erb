@@ -1,0 +1,45 @@
+<%= render 'comuninvestigacion' %>
+
+<div class="contenedor">
+
+  <div class="cajaPersonal01">
+    <p  class="tituloPersonalProyecto">Personal y proyectos de investigación </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Alvarado Rodríguez María Eugenia", "/investigadors/informacion/2", class: "personalAcademico" %></a><span class="cargo"> / coordinadora</span> <br />
+      <span class="proyectosDeInvestigacion">Las concepciones de ciencia y los vínculos entre las ciencias y las humanidades.</span>
+    </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Correas Vázquez Óscar", "/investigadors/informacion/12", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">Razón, retórica y derecho.</span>
+      <span class="proyectosDeInvestigacion">Movimientos sociales y procesos constituyentes contemporáneos en México y América Latina. (Proyecto PAPIIT)</span>
+      <span class="proyectosDeInvestigacion">Modernidad y derecho en Amética Latina: acumulación capitalista, desarrollo, naturaleza y movimientos sociales contrahegomónicos. (Proyecto PAPIIT)</span>
+
+    </p>
+
+
+  </div>
+  <div class="cajaPersonal02">
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Hernández Cervantes Aleida", "/investigadors/informacion/24", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">La emergencia de un pluralismo jurídico transnacional: sus relaciones de interlegalidad con el sistema jurídico estatal mexicano y la afectación a derechos sociales.</span>
+    </p>
+  </div>
+
+<div class="cajaPersonal03">
+
+  <p  class="tituloPersonalProyecto">Publicaciones recientes</p><br>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Modernidad y derecho en América Latina: Acumulación capitalista, desarrollo, naturaleza y movimientos sociales contrahegemónicos", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> María Eugenia Alvarado Rodríguez</span></p>
+
+    <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Derecho y literatura. Una alianza que subvierte el orden", root_path,class: "tituloProducto"%><br>
+      <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> Aleida Hernández Cervantes</span></p>
+
+      <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Experiencias universitarias de los movimientos sociales y la acción colectiva. Una mirada al pasado y al futuro desde el presente", root_path,class: "tituloProducto"%><br>
+        <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores"> María Eugenia Alvarado Rodríguez, Linda Vanessa Correa Nava, Edgar Jesús Costilla de la Trinidad</span></p>
+
+</div>
+
+</div>
+
+
+</div>

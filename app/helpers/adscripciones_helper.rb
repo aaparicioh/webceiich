@@ -1,0 +1,2 @@
+module AdscripcionesHelper
+end

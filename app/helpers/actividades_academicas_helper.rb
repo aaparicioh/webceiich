@@ -1,0 +1,2 @@
+module ActividadesAcademicasHelper
+end

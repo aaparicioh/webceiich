@@ -1,0 +1,59 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="titulo">
+      Elementos de la pagnia principal
+    </span>
+  </div>
+  <br>
+  <%=render "/partials/alerts"%>
+  <br>
+  <div class="row">
+    <%= link_to 'Nuevo elemento principal', new_principalelement_path, class: "btn btnNoActivo" %>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%@principalelements.each do |elemento|%>
+
+          <%if !elemento.urlVideo.empty?%>
+          <div class="d-flex justify-content-center">
+            <iframe  width="560" height="315"  src="https://www.youtube.com/embed/<%=elemento.urlVideo%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br>
+          </div>
+            <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+            <br>
+            <div class="d-flex justify-content-center">
+              <%= link_to 'Editar elemento', edit_principalelement_path(elemento), class: "btn btnNoActivo"  %>
+              <%= link_to 'Destruir', elemento,remote: true, method: :delete, data: { confirm: 'Seguro?' }, class: "btn btnNoActivo"  %>
+            </div>
+            <br>
+            <%end%>
+          <%end%>
+
+      <%end%>
+    </div>
+    <div class="col-md-6 ">
+      <%@principalelements.each do |elemento|%>
+
+        <%if elemento.urlVideo.empty?%>
+        <div class="d-flex justify-content-center">
+            <%=link_to image_tag("#{elemento.img.url}"), elemento.urlImg, class:"imagenP"%>
+        </div>
+
+            <%if current_admin.try(:is_admin?) or current_admin.try(:is_editor?)%>
+            <br>
+            <div class="d-flex justify-content-center">
+              <%= link_to 'Editar elemento', edit_principalelement_path(elemento), class: "btn btnNoActivo"  %>
+              <%= link_to 'Destruir', elemento,remote: true, method: :delete, data: { confirm: 'Seguro?' }, class: "btn btnNoActivo"  %>
+            </div>
+            <br>
+          <%end%>
+        <%end%>
+      <br>
+      <%end%>
+
+    </div>
+
+
+  </div>
+</div>

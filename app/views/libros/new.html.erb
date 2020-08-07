@@ -1,0 +1,10 @@
+<div class="contenedor">
+  <div class="divTitutlo">
+    <span class="titulo">
+      Nuevo libro
+    </span>
+  </div>
+  <br>
+  <%= render 'form', modelo: @libro %>
+  <%= link_to 'Ver todos los libros', libros_path, class:"btn btnNoActivo" %>
+</div>

@@ -1,0 +1,99 @@
+<div class="row">
+  <div class="mx-auto col-md-6 col-10">
+    <%= form_with(model: modelo, local: true,builder: BootstrapFormBuilder) do |form| %>
+    <%= render "partials/error_form", :modelo => modelo%>
+    <div class="row">
+      <%= form.label :clave %>
+      <%= form.text_field :clave %>
+    </div>
+    <div class="row">
+      <%= form.label :título %>
+      <%= form.text_field :titulo %>
+    </div>
+
+    <div class="row">
+      <%= form.label :autor %>
+      <%= form.text_field :autor %>
+    </div>
+
+    <div class="row">
+      <%= form.label :coordinador %>
+      <%= form.text_field :coordinador %>
+    </div>
+
+
+    <div class="row">
+      <%= form.label :coleccion %>
+      <%= form.select :coleccion_id,options_from_collection_for_select(Coleccion.order(:coleccion).all, :id, :coleccion) %>
+    </div>
+
+    <div class="row">
+      <%= form.label :tematica %>
+      <%= form.select :tematica_id,options_from_collection_for_select(Tematica.order(:tematica).all, :id, :tematica) %>
+    </div>
+
+    <div class="row">
+      <%= form.label :edicion %>
+      <%= form.text_field :edicion %>
+    </div>
+
+    <div class="row">
+      <%= form.label :anio %>
+      <%= form.text_field :anio %>
+    </div>
+
+    <div class="row">
+      <%= form.label :paginas %>
+      <%= form.text_field :paginas %>
+    </div>
+
+    <div class="row">
+      <%= form.label :isbn %>
+      <%= form.text_field :isbn %>
+    </div>
+
+    <div class="row">
+      <%= form.label :descriptores %>
+      <%= form.text_field :descriptores %>
+    </div>
+
+    <div class="row">
+      <%= form.label :precio %>
+      <%= form.text_field :precio %>
+    </div>
+
+    <div class="row">
+      <%= form.label :fecha_publicacion %>
+      <%= form.date_select :fecha_publicacion %>
+    </div>
+
+    <div class="row">
+      <% form.label :imagen %>
+      <% form.text_field :imagen %>
+    </div>
+
+    <div class="row">
+      <%= form.label :link %>
+      <%= form.text_field :url %>
+    </div>
+    <div class="row">
+      <%= form.label :img %>
+      <%= form.file_field :img %>
+    </div>
+
+    <div class="row">
+      <%= form.label :contenido %>
+      <%= form.cktext_area :contenido %>
+    </div>
+
+    <div class="row">
+      <%= form.label :sinopsis %>
+      <%= form.cktext_area :sinopsis %>
+    </div>
+  <br>
+    <div class="row">
+      <%= form.submit "Subir" %>
+    </div>
+    <% end %>
+  </div>
+</div>

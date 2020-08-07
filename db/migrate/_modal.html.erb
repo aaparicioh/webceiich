@@ -1,0 +1,82 @@
+<!-- Modal -->
+<div id="<%=@LibroModal%>" class="modal modal-events fade">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-content-events">
+      <div class="modal-header modal-header-events">
+        <h5 class="modal-title modal-title-events" id="exampleModalLabel"><%= libro.titulo %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-body-libro">
+        <div class="libro-img">
+          <%=image_tag "libros/"+libro.imagen, class:"imagen-modal"%>
+          </div>
+        <div class="libro-desc">
+          <p>
+            <strong>Clave:</strong>
+            <%= libro.clave %>
+          </p>
+
+          <p>
+            <strong>Autor:</strong>
+            <%= libro.autor %>
+          </p>
+
+          <p>
+            <strong>Coordinador:</strong>
+            <%= libro.coordinador %>
+          </p>
+
+          <p>
+            <strong>Coleccion:</strong>
+            <%= libro.coleccion %>
+          </p>
+
+          <p>
+            <strong>Tematica:</strong>
+            <%= libro.tematica %>
+          </p>
+
+          <p>
+            <strong>Edicion:</strong>
+            <%= libro.edicion %>
+          </p>
+
+          <p>
+            <strong>Anio:</strong>
+            <%= libro.anio %>
+          </p>
+
+          <p>
+            <strong>Paginas:</strong>
+            <%= libro.paginas %>
+          </p>
+          <p>
+            <strong>Precio:</strong>
+            <%= libro.precio %>
+          </p>
+          <p>
+            <strong>Isbn:</strong>
+            <%= libro.isbn %>
+          </p>
+
+          <p>
+            <strong>Contenido:</strong>
+            <%= libro.contenido %>
+          </p>
+
+          <p>
+            <strong>Sinopsis:</strong>
+            <%= libro.sinopsis %>
+          </p>
+          <p>
+            <strong>Descriptores:</strong>
+            <%= libro.descriptores %>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

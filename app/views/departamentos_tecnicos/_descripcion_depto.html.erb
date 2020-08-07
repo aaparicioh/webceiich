@@ -1,0 +1,14 @@
+<div class="contenedor">
+  <div class="divTitulo">
+    <span class="tituloCaja">
+      <%="Departamento "+@departamento.nombre%>
+    </span>
+  </div>
+  <div class="contenedor-imgdesc">
+    <div class="cajaImagen">
+        <%= image_tag "departamentosTecnicos/"+@departamento.foto, class: "imagen" %>
+    </div>
+    <div class="cajaDescripcion">
+      <%= @departamento.descripcion.try(:html_safe) %>
+    </div>
+  </div>

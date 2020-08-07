@@ -1,0 +1,2 @@
+class Adscripcion < ApplicationRecord
+end

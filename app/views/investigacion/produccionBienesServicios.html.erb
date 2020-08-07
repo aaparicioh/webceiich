@@ -1,0 +1,38 @@
+<%= render 'comuninvestigacion' %>
+
+<div class="contenedor">
+
+  <div class="cajaPersonal01">
+    <p  class="tituloPersonalProyecto">Personal y proyectos de investigación </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Contreras Suárez Enrique", "/investigadors/informacion/11", class: "personalAcademico" %></a><span class="cargo"> / coordinador</span> <br />
+      <span class="proyectosDeInvestigacion">Gobernabilidad, desarrollo local y migración internacional.</span>
+    </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  Contreras Molotla Felipe", "/investigadors/informacion/10", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion">El carácter de los cambios ocupacionales en los contextos rurales en México. (Tesis doctoral)</span>
+    </p>
+
+    <p><%= image_tag("iconAcademicoH.png") %><%= link_to "  López Paniagua Rosalía", "/investigadors/informacion/34", class: "personalAcademico" %><br>
+      <span class="proyectosDeInvestigacion"> Políticas para la producción de cuitlacoche (ustílago maydis) en invernadero en Tlaxcala, México. La agricultura familiar y la construcción de un sistema agroalimentario localizado.</span>
+    </p>
+
+  </div>
+  <div class="cajaPersonal02">
+
+  </div>
+
+
+<div class="cajaPersonal03">
+
+  <p  class="tituloPersonalProyecto">Publicaciones recientes</p><br>
+
+  <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to "  Empleo, capacitación y jóvenes rurales de México", root_path,class: "tituloProducto"%><br>
+    <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores">Enrique contreras Suárez y Felipe Contreras Molotla</span></p>
+
+    <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%><%= link_to " Población rural y trabajo en México", root_path,class: "tituloProducto"%><br>
+      <p><%=fa_icon('pencil-alt',class: 'fas fa-pencil-alt icon-autor')%><span class="autores">  Felipe Contreras Molotla</span></p>
+
+
+</div>
+</div>

@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  fecha_inicial: 2020-01-21
+  fecha_final: 2020-01-21
+  hora_inicial: 2020-01-21 17:13:46
+  hora_final: 2020-01-21 17:13:46
+  lugar: MyString
+  coordinacion: MyString
+  participantes: MyText
+  moderador: MyString
+  transmision_vivo: MyString
+  informes: MyString
+  programa: MyString
+  tipo: MyString
+  colaboracion: MyString
+  temas: MyString
+  extra: MyString
+  programa_completo: MyString
+  subtitulo: MyString
+
+two:
+  titulo: MyString
+  fecha_inicial: 2020-01-21
+  fecha_final: 2020-01-21
+  hora_inicial: 2020-01-21 17:13:46
+  hora_final: 2020-01-21 17:13:46
+  lugar: MyString
+  coordinacion: MyString
+  participantes: MyText
+  moderador: MyString
+  transmision_vivo: MyString
+  informes: MyString
+  programa: MyString
+  tipo: MyString
+  colaboracion: MyString
+  temas: MyString
+  extra: MyString
+  programa_completo: MyString
+  subtitulo: MyString

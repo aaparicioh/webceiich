@@ -1,0 +1,29 @@
+
+  <div class="titulos">
+    <span class="btnActivo">
+      <h2 class: "libros"><%=fa_icon('book-open',class: 'fas fa-book-open icon-libro')%> Revistas</h2>
+    </span>
+    </div>
+        <div class="cajaRevistas">
+          <div class="revista">
+            <%= link_to image_tag("revistas/interV8-N20.jpg"), "http://computo.ceiich.unam.mx/webceiich/docs/revis/interV8-N20.pdf", target: "_blank", title:"Interdiciplina", border: "0"%>
+            <div class="descripcionRevista">
+              <h5>Versión Open Journal Systems:</h5><a href="http://revistas.unam.mx/index.php/inter/issue/view/5293">www.interdisciplina.unam.mx</a><br>
+              <%= link_to "NÚMEROS ANTERIORES...", "interdiciplina" %>
+              <p>Call for papers: <a href=" rev.interd@unam.mx">  rev.interd@unam.mx </a></p>
+            </div>
+          </div>
+          <div class="revista">
+            <%= link_to image_tag("revistas/criticaJur36.jpg"), "http://computo.ceiich.unam.mx/webceiich/docs/revis/criticaJur36.pdf", target: "_blank", title:"criticajiridica", border: "0"%>
+            <div class="descripcionRevista">
+              <%= link_to "NÚMEROS ANTERIORES...", "critica_juridica" %>
+            </div>
+          </div>
+          <div class="revista">
+            <%= link_to image_tag("revistas/mundoNanoV12N23.jpg"), "http://www.revistas.unam.mx/index.php/nano/", target: "_blank", title:"mundonano", border: "0"%>
+            <div class="descripcionRevista">
+              <%= link_to "http://www.mundonano.unam.mx", "http://www.revistas.unam.mx/index.php/nano/issue/view/4982", target: "_blank" %><br>
+              <%= link_to "NÚMEROS ANTERIORES...", "http://www.mundonano.unam.mx/ojs/index.php/nano/issue/archive", target: "_blank" %>
+            </div>
+          </div>
+        </div>

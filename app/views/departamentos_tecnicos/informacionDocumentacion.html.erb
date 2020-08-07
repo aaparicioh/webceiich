@@ -1,0 +1,100 @@
+
+  <div class="CajaNombreProgramas">
+    <span class="nombreProgramas">&nbsp;&nbsp;Información y Documentación&nbsp;</span>
+  </div>
+
+  <div class="contenedor-depo">
+    <div class="depoImagen">
+      <%= image_tag("departamentosTecnicos/InfyDocu.jpg", class: "imagenPrograma") %>
+    </div>
+    <div class="depoDesc">
+    <p class="descripcionPrograma">Impulsa el desarrollo de sus colecciones, las difunde y salvaguarda de acuerdo con las necesidades de los Programas de investigación. Proporciona la información bibliográfica y documental de apoyo al trabajo de investigación. </p>
+    </div>
+
+  </div>
+
+<%$anio_novbiblio=2018%>
+	<div class="cajadatosDepartamentos">
+		<div class="cajaDelTituloDeLaPagina ">
+			<strong class="WebdepoTitulo">NOVEDADES BIBLIOGRÁFICAS</strong><br/>
+      <div class="historico-novedades">
+        <% ruta="http://computo.ceiich.unam.mx/webceiich/biblioteca/nove/" %>
+
+        <%loop do%>
+          <%$anio_novbiblio%>
+          <p class="WebdepoTitulo"><%=$anio_novbiblio%></p>
+          <% @novedadesbibliograficas.each do |novedadbibliografica| %>
+            <%if novedadbibliografica.anio == $anio_novbiblio.to_s%>
+              <%= link_to "#{novedadbibliografica.mes} |", ruta+novedadbibliografica.nombre_pdf, target: "_blank" %>
+            <%end%>
+          <%end%>
+          <%$anio_novbiblio=$anio_novbiblio+1%>
+          <%break if $anio_novbiblio > Time.now.strftime("%Y").to_i%>
+        <%end%>
+
+      </div>
+		</div>
+    <div class="pag-biblioteca">
+      <% ruta="http://biblio.unam.mx:8170/index.php" %>
+
+    			<%= link_to "INICIO DE PÁGINA WEB", ruta, target: "_blank",class: "btnWebPersonalTitulo" %>
+
+  		<% ruta1=ruta+"/la-biblioteca" %>
+  		<p align="center">
+
+  				<%= link_to "BIBLIOTECA", ruta1, target: "_blank",class: "btnWebPersonalTitulo" %>
+
+  				<%= link_to "Acerca de", ruta1+"/acerca", target: "_blank", :class => "subBoton" %>
+
+  				<%= link_to "Colecciones", ruta1+"/colecciones", target: "_blank", :class => "subBoton" %>
+
+  				<%= link_to "Normatividad", ruta1+"/normatividad", target: "_blank", :class => "subBoton" %>
+
+  				<%= link_to "Estructura orgánica", ruta1+"/estructura-organica", target: "_blank", :class => "subBoton" %>
+
+  		</p>
+  		<% ruta2=ruta+"/servicios" %>
+  		<p align="center">
+
+  				<%= link_to "SERVICIOS", ruta2, target: "_blank",class: "btnWebPersonalTitulo" %>
+
+  				<%= link_to "Préstamos", ruta2+"/prestamos", target: "_blank", :class => "subBoton" %>
+
+  				<%= link_to "Servicios en sala", ruta2+"/servicios-en-sala", target: "_blank", :class => "subBoton" %>
+
+  				<%= link_to "Servicios de información", ruta2+"/servicios-de-informacion", target: "_blank", :class => "subBoton" %>
+
+  		</p>
+  		<% ruta3=ruta+"/enlinea" %>
+  		<p align="center">
+
+  				<%= link_to "EN LÍNEA", ruta3, target: "_blank",class: "btnWebPersonalTitulo" %>
+
+  				<%= link_to "Catálogos en línea", ruta3+"/catalogos-en-linea", target: "_blank", :class => "subBoton" %>
+
+  				<%= link_to "Recursos", ruta3+"/recursos", target: "_blank", :class => "subBoton" %>
+
+  				<%= link_to "Sitios UNAM", ruta3+"/sitios-unam", target: "_blank", :class => "subBoton" %>
+
+  				<%= link_to "Recursos DGB", ruta3+"/recursos-dgb", target: "_blank", :class => "subBoton" %>
+
+  		</p>
+    </div>
+
+
+		<div class="datosDepartamentos">
+			<p align="justify" class="tituloPersonalProyecto">Jefa del Departamento</p>
+			<p align="justify">	<%= image_tag("iconAcademicoM.png", border: "0") %>	<%= link_to "  Nicolasa Ramírez Vicente", "/tecnicos/informacion/24", :class => "personalAcademico" %>
+			</p>
+			<p align="justify">Tel. 5623-0031</p>
+			<p align="justify" class="tituloPersonalProyecto">Personal:</p>
+			<p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><span class="personalAcademicoSinLiga">  Luis Demetrio Cortés Fraire</span> (administrativo)
+			</p>
+			<p align="justify"><%= image_tag("iconAcademicoH.png", border: "0") %><%= link_to "  Gustavo Enríquez Téllez", "/tecnicos/informacion/8", :class => "personalAcademico" %>
+			</p>
+			<p align="justify"><%= image_tag("iconAcademicoM.png", border: "0") %><span class="personalAcademicoSinLiga">  Karina Pardo Sosa</span> (administrativa)
+			</p>
+		</div>
+
+
+</div>

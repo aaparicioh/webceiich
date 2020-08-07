@@ -1,0 +1,79 @@
+<link href="10000000.css" rel="stylesheet" type="text/css" title="normal"/>
+<link href="20000000.css" rel="stylesheet" type="text/css" title="normal"/>
+<link href="30000000.css" rel="stylesheet" type="text/css" title="normal"/>
+<link href="fondo_editorial.css" rel="stylesheet" type="text/css" title="normal"/>
+
+<div class="contenedor">
+  <div class="titulos">
+    <span class="btnActivo">
+    <h2 class: "libros"><%=fa_icon('book',class: 'fas fa-book icon-libro')%> Libros</h2>
+    </span>
+    </div>
+    <div class="opciones">
+      <span class="btnActivo">
+          <%= link_to "Colección", "libros_coleccion" %>
+      </span>
+      <span class="btnNoActivo">
+        <%= link_to "Tématicas", "libros_tematica" %>
+      </span>
+    </div>
+<div class="contenido">
+    <div style="width:47%; float:left; margin-left:3%">
+      <p>&nbsp;</p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Ámerica Latina, Centroaérica","america_latina", class:"link-libros"%></p>
+
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Antologías","antologia", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Autores, Textos y Temas. Ciencias Sociales de Anthropos","autores_textos_temas", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Biblioteca América Latina: Actualidad y Perspectivas","biblioteca_america_latina", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Biblioteca Aprender a Aprender","aprenderAaprender", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Biblioteca de las Entidades Federativas","entidades_federativas", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Bibliotheca Mexicana Historiae Scientiarum","mexicana_historie", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Biblioteca México: Actualidad y Perspectivas","biblioteca_mexico", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Alternativas","coleccion_alternativas", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Ambiente y Democracia","ambiente_democracia", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Ciencia y Tecnología en la Historia de México","cien_tec_hist_mexico", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Clásicos","clasicos", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Conceptos","coleccion_conceptos", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Cuadernos del CEIICH/Serie Fuentes","cuadernos_CEIICH_fuentes", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Cuadernos del CEIICH","cuadernos_CEIICH", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Cuadernos del CEIICH/Serie Seminarios","cuadernos_CEIICH_seminarios", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Debate y Reflexión","debate_reflexion", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección de Historia Ferroviaria","historia_ferroviaria", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Derecho y Sociedad","derecho_sociedad", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Diversidad Feminista","diversidad_feminista", class:"link-libros"%></p>
+          <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Educación Superior","educacion_superior", class:"link-libros"%></p>
+      </div>
+
+    <div style="width:47%; float:right; margin-left:3%">
+
+        <br><br>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección El Mundo Actual: Situación y Alternativas","mundo_actual", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección El Mundo del Siglo XXI","mundo_sigloxxi", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Ensamblar-nos","ensamblar_nos", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección La Democracia en México","democracia_mexico", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección La Pluralidad Cultural en México del Programa Universitario México Nación Multicultural","pluralidad_cultural", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección las Ciencias y las humanidades en los umbrales del siglo XXI","ciencias_humanidades_sigloxxi", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección México y Democracia","mexico_democracia", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección México: Actualidad y Perspectivas","mexico_actualidad_perspectivas", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Pensamiento crítico. Pensamiento utópico/(Anthropos)","pensamiento_critico", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Posgrado de la Dirección General de Estudios de Posgrado","posgradoDGEP", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Prospectiva Global","prospectiva_global", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Sociología y Política","sociologia_politica", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Tendencias/(UA de NL)","tendencias", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Colección Teoría y Análisis/(UAM-X)","teoria_analisis", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros1') %> <%= link_to "Colección Umbrales de México. Cultura y Sociedad","umbrales_mexico", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Intersecciones de CONACULTA","intersecciones_CONACULTA", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Serie Estudios Urbanos","estudios_urbanos", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Serie Foros y Debates Ambientales","foros_debates_ambientales", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Serie La Democracia en México: Actualidad y Perspectivas","democracia_mexico_actualidad", class:"link-libros"%></p>
+        <p> <%=fa_icon('book-open',class: 'fas fa-book-open tema-libros2') %> <%= link_to "Sin colección","sin_coleccion", class:"link-libros"%></p>
+      </p>
+
+
+      </div>
+    </div>
+
+
+
+     <!-- TERMINA CONTENIDOS -->
+</div>

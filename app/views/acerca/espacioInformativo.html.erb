@@ -1,0 +1,39 @@
+<div class="contenedor">
+	<div class="divTitulo">
+		<span class="titulo">
+			Espacio Informativo Interno
+		</span>
+	</div>
+	<br>
+	<% if signed_in? and current_investigador %>
+	<div align="center">Sesión iniciada mediante <b><%= current_investigador.email %></b><br/><br/></div>
+	<%= link_to "Editar perfil público", edit_investigador_registration_path, class: "link" %><br/><br/>
+	<%= link_to "Espacio informativo", acerca_espacio_informativo_path,  class: "link" %><br/>
+	<%= link_to "Procedimientos internos", acerca_procedimientos_internos_path,  class: "link" %><br/>
+	<%@documentos.each do |d|%>
+	<%if d.nombre == "Programas con financiamiento UNAM"%>
+	<%= link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank",class: "link"  %><br/>
+	<%end%>
+	<%end%>
+
+	<%= link_to "Docencia", acerca_docencia_path,  class: "link" %><br/>
+	<br/>
+	<br/>
+
+	<%= link_to "Cerrar sesión", destroy_investigador_session_path,remote: true, method: :delete, class:"btn btnNoActivo"%>
+	<% elsif signed_in? and current_tecnico %>
+	<div align="center">Sesión iniciada mediante <b><%= current_tecnico.email %></b><br/><br/></div>
+	<%= link_to "Editar perfil público", edit_tecnico_registration_path %><br/><br/>
+	<%= link_to "Primer vínculo del espacio interno", root_path,  class: "link" %><br/>
+	<%= link_to "Segundo vínculo del espacio interno", root_path,  class: "link" %><br/>
+	<%= link_to "Tercer vínculo del espacio interno", root_path,  class: "link" %><br/>
+	<%= link_to "Cuarto vínculo del espacio interno", root_path,  class: "link" %><br/>
+	<br/>
+	<br/>
+	<%= link_to "Salir", destroy_tecnico_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "btn btnNoActivo" %>
+	<% else %>
+	<%= link_to "Ingresar (Investigadores)", new_investigador_session_path,  class: "btn btnNoActivo" %><br/><br/>
+	<%= link_to "Ingresar (Técnicos)", new_tecnico_session_path,  class: "btn btnNoActivo" %>
+	<% end %>
+	<br><br>
+</div>

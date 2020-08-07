@@ -1,0 +1,13 @@
+  <%= render "multimedia"%>
+				<div class="cajadatosDepartamentos">
+					<div class="botones">
+						<%= link_to "Personal","produccionAudiovisual",class: "btnDepoNoActivo"%>
+						<%= link_to "Producciones","pAV_producciones",class: "btnDepoActivo"%>
+            <%= link_to "Repositorio","http://132.248.246.141:8080/jspui/", target:"_blank",class: "btnDepoNoActivo"%>
+						<%= link_to "Sitios de interés","pAV_sitiosinteres",class: "btnDepoNoActivo"%>
+					</div>
+          <div class="parrafo">
+            <p align="justify"><%=fa_icon('video',class: 'fas fa-video fa-2x icon-publicacion')%>  A la fecha cuenta con mas de 150 producciones realizadas por el centro, entre las que destacan cerca de 20 documentales, que han sido reconocidos en certámenes nacionales e internacionales. Y se han exhibido en diferentes canales de televisión y en salas y circuitos culturales.</p>
+            <p align="right"><%=fa_icon('photo-video',class: 'fas fa-photo-video icon-publicacion')%> <%= link_to "Videos", "fondo_editorial/video", class: "link-presencia_medios"%></p>
+          </div>
+				</div>

@@ -1,0 +1,150 @@
+<div class="contenedor">
+
+  <div class="divTitulo">
+    <span class="titulo">
+      Consejo Interno
+    </span>
+  </div>
+  <div class="divTitulo">
+    <span class="subtitulo">
+      Actas
+    </span>
+  </div>
+
+  <div class="row">
+    <%$anio_actas=2016%>
+
+    <%@documentos.each do |d|%>
+      <%if d.subtipo == "" && d.tipo != "Docencia" && d.tipo != "Programas con financiamiento UNAM" %>
+        <%= link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"  %>
+      <%end%>
+    <%end%>
+  </div>
+
+
+
+
+
+
+
+    <%loop do%>
+      <%$anio_actas%>
+      <h6><%=$anio_actas%>
+        <span type="button" name="button" onclick="cambiarbtn(<%=$anio_actas%>)" class="plus" id="plus-<%=$anio_actas%>"><%= fa_icon('plus-square',class: 'fas fa-plus-square icono')%></span>
+          <span type="button" name="button" onclick="cambiarbtn(<%=$anio_actas%>)" class="minus" id="minus-<%=$anio_actas%>"><%= fa_icon('minus-square',class: 'fas fa-minus-square icono')%></span>
+      </h6
+
+
+        <%@documentos.each do |d|%>
+          <%if d.subtipo == "Consejo Interno"%>
+            <%if d.anio == $anio_actas.to_s%>
+              <div class="actas_ci div-<%=$anio_actas%>">
+                <%= link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"   %>
+              </div>
+            <%end%>
+          <%end%>
+        <%end%>
+
+      <%$anio_actas=$anio_actas+1%>
+      <%break if $anio_actas > Time.now.strftime("%Y").to_i%>
+    <%end%>
+
+
+  <br>
+
+  <h5>Informes y programas de actividades</h5>
+
+
+  <%@documentos.each do |d|%>
+    <%if d.subtipo == "Informes y programas de actividades"%>
+      <h6><%= link_to d.anio, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"  %></h6>
+    <%end%>
+  <%end%>
+
+  <br>
+  <h5>Ejercicio Persupuestal</h5>
+
+
+  <%$anio_ejercicioPresupuestal=2017%>
+
+  <%loop do%>
+    <h6><%=$anio_ejercicioPresupuestal%>  <span type="button" name="button" onclick="cambiarbtninfo(<%=$anio_ejercicioPresupuestal%>)" class="plus" id="plus-info-<%=$anio_ejercicioPresupuestal%>"><%= fa_icon('plus-square',class: 'fas fa-plus-square icono')%></span>
+        <span type="button" name="button" onclick="cambiarbtninfo(<%=$anio_ejercicioPresupuestal%>)" class="minus" id="minus-info-<%=$anio_ejercicioPresupuestal%>"><%= fa_icon('minus-square',class: 'fas fa-minus-square icono')%></span>
+    </h6>
+    <%@documentos.each do |d|%>
+      <%if d.subtipo == "Ejercicio presupuestal"%>
+          <%if d.anio == $anio_ejercicioPresupuestal.to_s%>
+            <div class="info-prog div-info-<%=$anio_ejercicioPresupuestal%>">
+              <%= link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"   %>
+            </div>
+          <%end%>
+      <%end%>
+    <%end%>
+
+
+
+
+
+    <%$anio_ejercicioPresupuestal=$anio_ejercicioPresupuestal+1%>
+    <%break if $anio_ejercicioPresupuestal > Time.now.strftime("%Y").to_i%>
+  <%end%>
+
+  <%@documentos.each do |d|%>
+    <%if d.subtipo == "Ejercicio presupuestal"%>
+      <%if d.anio == ""%>
+        <%= link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"   %>
+      <%end%>
+    <%end%>
+  <%end%>
+
+  <br>
+  <br>
+  <h5>Documentos Oficiales</h5>
+
+  <%@documentos.each do |d|%>
+    <%if d.subtipo == "Documentos oficiales"%>
+        <h6><%= link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"  %></h6>
+    <%end%>
+  <%end%>
+  <br>
+
+  <h5>Plan Editorial</h5>
+
+  <%@documentos.each do |d|%>
+    <%if d.subtipo == "Plan editorial"%>
+    <h6><%= link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"  %></h6>
+    <%end%>
+  <%end%>
+  <br>
+  <h5>Actas de Acuerdos del Comité Editorial</h5>
+
+  <%@documentos.each do |d|%>
+    <%if d.subtipo == "Actas de Acuerdos del Comité Editorial"%>
+    <h6><%= link_to d.nombre, asset_path(d.pdf, skip_pipeline: true), target: "_blank", class: "link"  %></h6>
+    <%end%>
+  <%end%>
+
+
+    <%=link_to fa_icon('undo',class: 'fas fa-undo fa-3x icon-back'), 'javascript:history.back()'%>
+
+</div>
+
+<script type="text/javascript">
+
+  $(".actas_ci").hide();
+  $(".minus").hide();
+  function cambiarbtn(anio){
+
+    $("#plus-"+anio).toggle();
+    $("#minus-"+anio).toggle();
+    $(".div-"+anio).toggle();
+  }
+
+  $(".info-prog").hide();
+  function cambiarbtninfo(anio){
+
+    $("#plus-info-"+anio).toggle();
+    $("#minus-info-"+anio).toggle();
+    $(".div-info-"+anio).toggle();
+  }
+</script>

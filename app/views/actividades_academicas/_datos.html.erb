@@ -1,0 +1,50 @@
+
+<!-- Modal -->
+<div id="<%=@modal%>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true"  role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content modal-contenido">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title titulo-modal">
+            <%= fa_icon('paperclip',class: 'fas fa-paperclip')%>
+            <%= activity.nombre %>
+          </h4>
+      </div>
+      <div class="modal-body">
+        <div class="columnas">
+          <div class="img-modal">
+            <%= image_tag "actividades/"+activity.img, class: "img-modal"%>
+          </div>
+          <div class="informacion-modal">
+            <p><%= fa_icon('calendar-alt',class: 'far fa-calendar-alt fa-2x')%><%= "   Fecha inicio: "+activity.fecha_inicio.to_s%></p>
+            <p><%= fa_icon('calendar-alt',class: 'fas fa-calendar-alt fa-2x')%><%="   Fecha fin: " +activity.fecha_fin.to_s %></p>
+            <p><%= fa_icon('clock',class: 'far fa-clock fa-2x')%><%= "   Hora: "+activity.hora.strftime("%H:%M").to_s%></p>
+            <p><%= fa_icon('map-marked-alt',class: 'fas fa-map-marked-alt fa-2x')%><%= "   Lugar:  "+activity.lugar.to_s%></p>
+            <%= activity.coordinacion %>
+            <%= activity.descripcion %>
+            <%= activity.informes %>
+            <%= activity.tipo_actividad %>
+            <%= activity.programa %>
+            <%= activity.img %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+$(document).ready(function(){
+elemento = document.getElementById('carouselExampleIndicators');
+
+  $('#<%=@modal%>').on('shown.bs.modal', function () {
+     $(elemento).carousel("pause");
+  });
+
+});
+</script>

@@ -1,0 +1,27 @@
+
+  <%@publicaciones.each do |publicacion|%>
+    <%if programa == publicacion.programa_id%>
+    <span class="subtitulo">
+      Publicaciones
+    </span>
+      <%contmodal=1%>
+      <%@libro.each do |libro|%>
+        <%if publicacion.libro_id == libro.id%>
+          <div class"col">
+            <%=fa_icon('sticky-note',class: 'far fa-sticky-note fa-2x icon-publicacion')%>
+            <%@LibroModal="LibroModal"+contmodal.to_s%>
+            <%=link_to libro.titulo,"#", data: { target: "##{@LibroModal}", toggle: "modal"},class: "subtitulo link"%>
+            <%=render "/fondo_editorial/modal", libro: libro%>
+            <span class="autores"><%=libro.autor%></span>
+            <%contmodal=contmodal+1%>
+            <br>
+            <div class="float-right">
+              <%=link_to 'Editar', edit_publicacion_path(publicacion),class:"btn btnActivo"%>
+              <%= link_to 'Destroy', publicacion,remote: true , method: :delete, data: { confirm: 'Are you sure?' },class:"btn btnActivo" %>
+            </div>
+          </div>
+          <br>
+        <%end%>
+      <%end%>
+    <%end%>
+  <%end%>

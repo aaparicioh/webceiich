@@ -1,0 +1,87 @@
+<!-- Modal -->
+<div id="<%=@ActividadModal%>" class="modal modal-events fade" >
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-content-events">
+      <div class="modal-header modal-header-events">
+        <h5 class="modal-title modal-title-events" id="exampleModalLabel"><%=event.titulo%></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-body-event">
+        <div class="event-img">
+            <%= image_tag "#{event.img}", class:"imagen-modal"%>
+
+          </div>
+        <div class="event-desc">
+          <p>
+            <%=fa_icon('paper-plane',class: 'fas fa-paper-plane  icono')%>
+            <strong>Subtitulo:</strong>
+            <%=event.subtitulo%>
+          </p>
+          <p>
+            <%= fa_icon('calendar',class: 'fas fa-calendar fa-2x icono')%>
+            </i><strong>Fecha Inicio:</strong>
+            <%=event.fecha_inicial%>
+          </p>
+          <p>
+            <%= fa_icon('calendar',class: 'far fa-calendar fa-2x icono')%>
+            <strong>Fecha Fin:</strong>
+            <%=event.fecha_final%>
+          </p>
+          <p>
+            <%= fa_icon('map-marker',class: 'fas fa-map-marker fa-2x icono')%>
+            <strong>Lugar:</strong>
+          </p>
+          <p>
+            <%=event.lugar%>
+          </p>
+          <p>
+            <%= fa_icon('user',class: 'fas fa-user fa-2x icono')%>
+            <strong>Coordinacion:</strong>
+            <%=event.coordinacion%>
+          </p>
+          <p>
+            <strong>Moderador:</strong>
+            <%=event.moderador%>
+          </p>
+          <p>
+            <strong>Colaboración:</strong>
+            <%=event.colaboracion%>
+          </p>
+          <p>
+            <%= fa_icon('users',class: 'fas fa-users fa-2x icono')%>
+            <strong>Participantes:</strong>
+          </p>
+          <p>
+            <%=event.participantes%>
+          </p>
+          <p>
+            <strong>Temas:</strong>
+            <%=event.temas%>
+          </p>
+          <p>
+            <strong>Transmicion en vivo:</strong>
+            <%=event.transmision_vivo%>
+          </p>
+          <p>
+            <strong>Informes:</strong>
+            <%=event.informes%>
+          </p>
+          <p>
+            <strong>Programa:</strong>
+            <%=event.programa%>
+          </p>
+
+          <p>
+            <strong>Actividades Internas:</strong>
+            <%=event.actividades_internas.try(:html_safe)%>
+          </p>
+
+        </div>
+
+      
+      </div>
+    </div>
+  </div>
+</div>
